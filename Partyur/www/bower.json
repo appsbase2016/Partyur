@@ -1,0 +1,23 @@
+{
+  "name": "partyur",
+  "version": "2.0.0",
+  "authors": [
+    "Adam Rogas <adam@rogassi.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "requirejs-regular": "~0.3.0"
+  }
+}

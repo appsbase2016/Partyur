@@ -1,0 +1,27 @@
+{
+  "name": "requirejs-regular",
+  "version": "0.3.0",
+  "main": "rgl.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "tmp",
+    "test",
+    "package.json"
+  ],
+  "devDependencies": {
+    "regularjs": "regularjs/regular#next",
+    "requirejs-text": "2.0.12"
+  },
+  "homepage": "https://github.com/regularjs/requirejs-regular",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "b0605f0e602062edca881e6f2bdcb433e65c1d9c"
+  },
+  "_source": "git://github.com/regularjs/requirejs-regular.git",
+  "_target": "~0.3.0",
+  "_originalSource": "requirejs-regular"
+}

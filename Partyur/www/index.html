@@ -1,0 +1,1828 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <title>Guudtimes</title>
+
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+    <script src="scripts/pouchdb-3.5.0.min.js"></script>
+    <!--<script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="scripts/NativePageTransitionsKendoAdapter.js"></script>-->
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="scripts/phone/phone.js"></script>
+    <script src="bower_components/parsleyjs/dist/parsley.min.js"></script>
+    <script src="bower_components/parsleyjs-bootstrap3/parsleyConfig.js"></script>
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script>
+        function handleOpenURL(url) {
+            setTimeout(function () { app.handleURL(url) }, 0);
+        }
+    </script>
+</head>
+<body>
+
+    <div id="layoutLanding" data-id="landing" data-role="layout">
+        <div class="headerTop" data-role="header"><div></div></div>
+        <div class="greyLogo" data-role="header"></div>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+            <div data-role="tabstrip" class="landingTabStrip" data-selected-index="2">
+                <a href="#login">
+                    Login
+                </a><a href="#signup">
+                    Signup
+                </a>
+                <a href="#landing" style="width:50px">
+                    <i class="fa fa-info"></i>
+                </a>
+            </div>
+            <!--<ul class="nav nav-justified" style="height:50px">
+                <li role="presentation" style="display: table-cell; width:50px;"><a onclick="app.navigate" href="#"><i class="fa fa-info"></i></a></li>
+                <li role="presentation" style="display: table-cell; width:50%;"><a onclick="app.navigate" href="#login">Login</a></li>
+                <li role="presentation" style="display: table-cell; width:50%;"><a onclick="app.navigate" href="#signup">Signup</a></li>
+            </ul>-->
+        </footer>
+    </div>
+
+    <div id="authLayout" data-id="auth" data-role="layout">
+        <div class="headerTop" data-role="header"><div></div></div>
+        <div class="greyLogo" data-role="header"></div>
+
+    </div>
+
+    <div id="layoutMain" data-id="main" data-role="layout" data-show="app.mainLayoutShow" data-init="app.mainLayoutInit">
+        <div class="headerTop" data-role="header"><div></div></div>
+        <div data-role="header">
+            <div data-role="navbar" style="background-image:url('img/topLogo.png');background-size:150px; background-repeat:no-repeat;background-position:center;">
+                <a id="lb" data-role="button" data-click="app.topNav" data-rel="drawer" href="#appDrawer" data-align="left"><i class="fa fa-bars"></i></a>
+                <a id="rb" data-role="button" data-click="app.topNav" data-rel="drawer" href="#rightDrawer" data-align="right" data-icon="favorites"></a>
+            </div>
+        </div>
+        <div data-role="header" class="adHeader">
+            <div style="padding:4px;padding-top:0;padding-bottom:0;height:100%">
+                <div style="width:100%;height:100%;background-image:url('img/ad.jpg');background-position:center;background-size:contain; background-repeat:no-repeat; text-align:center;" data-role="touch" data-tap="app.openExternalURL"></div>
+            </div>
+        </div>
+        <div data-role="header">
+            <div id="searchToggle" data-role="tabstrip" class="light" data-select="app.mapNav">
+                <a><i class="fa fa-map-marker"></i><span>Map</span></a>
+                <a><i class="fa fa-list"></i><span>List</span></a>
+                <a><i class="fa fa-camera"></i><span>Posts</span></a>
+                <a><i class="fa fa-star-o"></i><span>Promo</span></a>
+            </div>
+        </div>
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+            <div data-role="tabstrip" data-select="app.mainNav" class="main-nav">
+                <a data-icon="guudtimes-u" data-role="button" href="#home">
+                    The Feed
+                </a>
+                <a data-icon="search" data-role="button" href="#searchMap">
+                    The Scene
+                </a>
+                <a data-icon="camera" data-role="button">
+                    Post
+                </a>
+                <a class="fa" data-role="button" data-icon="beer" data-click="app.myParty">
+                    My Party
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="landing" data-role="view" data-layout="landing">
+        <div class="overlay">
+            <!--<div style="padding:60px;padding-bottom:0;padding-top:40px;text-align:center;">
+                <img src="img/192.png" style="height:20vh" />
+            </div>-->
+            <div id="scrollview-container" style="display:none">
+                <div data-role="scrollview" data-page="0">
+                    <!--<div class="promo-text" data-role="page">Search for the hottest spots or best drink specials and promotions. Easily navigate list and map view, or just follow your favs. <br /><br />Then go join the party... </div>
+                    <div class="promo-text" data-role="page">Promote yourself by posting your party pic or video without the worry of it being viewed by family and bosses.<br /><br>Set your post to last for 15 minutes, 1 hour or all night and auto delete at 3am. Start fresh again tommorow. Cheers</div>-->
+                </div>
+            </div>
+            <div class="promo-text" data-role="page" style="padding-top:100px;"><!--<div style="font-size:6vh">It's Time To Get</div>--><span class="hsjs"><span style="background-color:#fb009a;display:inline-block;padding-left:20px;padding-right:20px;">TURNUP</span></span><div style="font-size:8vh;padding-top:20px;">with</div></div>
+            <div style="padding-top:0;padding:30px;text-align:center;">
+                <img src="img/whiteLogo.png" style="width:70vw" />
+            </div>
+            <div id="versionNumber"></div>
+        </div>
+    </div>
+
+    <div id="login" data-role="view" data-title="Login" data-layout="landing" data-model="APP.models.login" data-show="app.loginShow">
+        <div style="padding:10px">
+            <div class="socialBtns">
+                <div class="btn btn-block btn-social btn-facebook btn-lg" data-role="touch" data-tap="app.fbLogin">
+                    <i class="fa fa-facebook"></i>
+                    Login with Facebook
+                </div>
+                <!--<div class="btn btn-block btn-social btn-instagram btn-lg">
+                    <i class="fa fa-instagram"></i>
+                    Login with Instagram
+                </div>-->
+                <!--<div class="btn btn-block btn-social btn-twitter btn-lg">
+                    <i class="fa fa-twitter"></i>
+                    Login with Twitter
+                </div>-->
+                <div class="orBlock">- Or -</div>
+            </div>
+            <div class="form-group darkForm"><input id="loginTel" class="topInputs" style="padding-left: 48px;" type="tel" placeholder="Phone Number" /></div>
+            <div class="form-group darkForm"><input id="loginPass" class="topInputs" type="password" placeholder="Password" /></div>
+
+            <a class="btn btn-block btn-social btn-guudtimes btn-lg" data-tap="app.login" onclick="app.login" data-role="touch">
+                <i class="fa fa-guudtimes"></i>
+                Login with my Phone Number
+            </a>
+            <div class="darkForm forgotPassword">Forgot Your Password ?</div>
+            <div class="darkForm error">
+                Your <b>Phone Number</b> or <b>Password</b><br />are incorrect
+            </div>
+            <div class="darkForm serverError">
+                There was an error with the server.
+            </div>
+        </div>
+    </div>
+
+
+    <div id="signup" data-role="view" data-title="landing" data-layout="landing" data-model="APP.models.landing" data-show="app.signupShow">
+        <div style="padding:10px">
+            <div class="socialBtns">
+                <div class="btn btn-block btn-social btn-facebook btn-lg" data-role="touch" data-tap="app.fbLogin">
+                    <i class="fa fa-facebook"></i>
+                    Sign Up with Facebook
+                </div>
+                <!--<div class="btn btn-block btn-social btn-instagram btn-lg">
+                    <i class="fa fa-instagram"></i>
+                    Signup with Instagram
+                </div>-->
+                <!--<div class="btn btn-block btn-social btn-twitter btn-lg">
+                    <i class="fa fa-twitter"></i>
+                    Sign Up with Twitter
+                </div>-->
+                <div class="orBlock">- Or -</div>
+            </div>
+            <div class="form-group darkForm"><input id="signupTel" class="topInputs" style="padding-left: 48px;" type="tel" placeholder="Phone Number" /></div>
+
+            <div class="form-group darkForm"><input id="signupPass" class="topInputs" type="password" placeholder="Password" /></div>
+
+            <div class="form-group darkForm"><input id="signupPassVer" type="password" placeholder="Confirm Password" /></div>
+            <!--<div class="divider darkForm"></div>
+            <div class="form-group darkForm optional"><input id="signupPromo" type="text" placeholder="Promo Code" /></div>-->
+
+            <div style="font-size:10px;margin-left:10px;margin-bottom:10px">
+                <input type="checkbox" id="signupAgreeTerms" style="float:left" /><label for="signupAgreeTerms" style="margin-left:5px;float:left;margin-top: 5px;">I Agree To The </label><span data-role="button" href="#termsModal" data-rel="modalview" style="margin-left:5px;margin-top:-2px;">Terms of Service</span>
+            </div>
+
+            <a class="btn btn-block btn-social btn-guudtimes btn-lg" data-tap="app.signup" data-role="touch">
+                <i class="fa fa-guudtimes"></i>
+                Sign Up with my Phone Number
+            </a>
+
+            <div class="darkForm error">
+                you must provide a <b>phone number</b> &amp; <b>password</b>
+            </div>
+            <div class="darkForm serverError">
+                There was an error with the server.
+            </div>
+
+        </div>
+    </div>
+
+    <div id="termsModal" data-role="modalview" style="width: 96vw; height: 97vh;" data-init="app.termsView.init">
+
+        <div data-role="header">
+            <div data-role="navbar" style="background-color:#808080;min-height:50px;text-align:left">
+                Terms Of Service
+                <a data-dismiss="modal" data-role="button" data-align="right" aria-label="Close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <div class="TOSInfo" style="overflow:scroll">
+            <div style="padding:5px">
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        These Terms of Service (&quot;<b>Terms</b>&quot;)
+                        govern your access to and use of the services, including our various websites,
+                        SMS, APIs, email notifications, applications, buttons, widgets, ads, and
+                        commerce services (the &quot;<b>Services</b>&quot; or “<b>partyur</b>”), and any
+                        information, text, graphics, photos or other materials uploaded, downloaded or
+                        appearing on the Services (collectively referred to as &quot;<b>Content</b>&quot;).
+                        Your access to and use of the Services are conditioned on your acceptance of
+                        and compliance with these Terms. By accessing or using the Services you agree
+                        to be bound by these Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>1. Basic Terms</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+                        You are responsible for your use of
+                        the Services, for any Content you post to the Services, and for any
+                        consequences thereof. The Content you submit, post, or display will be able to
+                        be viewed by other users of the Services and through third party services and.
+                        You should only provide Content that you are comfortable sharing with others
+                        under these Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+                        Tip What you say on partyur may be
+                        viewed publically . You are what you post!
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+                        You may use the Services only if
+                        you can form a binding contract with Guud Time, Inc. and are not a person
+                        barred from receiving services under the laws of the United States or other
+                        applicable jurisdiction. If you are accepting these Terms and using the
+                        Services on behalf of a company, organization, government, or other legal
+                        entity, you represent and warrant that you are authorized to do so. You may use
+                        the Services only in compliance with these Terms and all applicable local, state,
+                        national, and international laws, rules and regulations.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        The Services that Guud Times, Inc
+                        provides are always evolving and the form and nature of the Services may change
+                        from time to time without prior notice to you. In addition, Guud Times, Inc.
+                        may stop (permanently or temporarily) providing the Services (or any features
+                        within the Services) to you or to users generally and may not be able to
+                        provide you with prior notice. We also retain the right to create limits on use
+                        and storage at our sole discretion at any time without prior notice to you.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        The Services may include
+                        advertisements, which may be targeted to the Content or information on the
+                        Services, queries made through the Services, or other information. The types
+                        and extent of advertising by Guud Times, Inc. on the Services are subject to
+                        change. In consideration for Guud Times, Inc. granting you access to and use of
+                        the Services, you agree that Guud Times, Inc. and its third party providers and
+                        partners may place such advertising on the Services or in connection with the
+                        display of Content or information from the Services whether submitted by you or
+                        others.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>2. Privacy</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        Any information that you provide to
+                        Guud Times, Inc. is subject to our Privacy Policy, (<a href="http://www.guutimes.com/privacy">www.guutimes.com/privacy</a>) which
+                        governs our collection and use of your information. You understand that through
+                        your use of the Services you consent to the collection and use (as set forth in
+                        the Privacy Policy) of this information, including the transfer of this
+                        information to the United States and/or other countries for storage, processing
+                        and use by Guud Times, Inc. As part of providing you the Services, we may need
+                        to provide you with certain communications, such as service announcements and
+                        administrative messages. These communications are considered part of the
+                        Services and your partyur account, which you may not be able to opt-out from
+                        receiving.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>3. Passwords</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        You are responsible for
+                        safeguarding the password that you use to access the Services and for any
+                        activities or actions under your password. We encourage you to use
+                        &quot;strong&quot; passwords (passwords that use a combination of upper and
+                        lower case letters, numbers and symbols) with your account. Guud Times, Inc.
+                        cannot and will not be liable for any loss or damage arising from your failure
+                        to comply with the above.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            4. Content on the
+                            Services
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        All Content, whether publicly
+                        posted or privately transmitted, is the sole responsibility of the person who
+                        originated such Content. We may not monitor or control the Content posted via
+                        the Services and, we cannot take responsibility for such Content. Any use or
+                        reliance on any Content or materials posted via the Services or obtained by you
+                        through the Services is at your own risk.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        We do not endorse, support,
+                        represent or guarantee the completeness, truthfulness, accuracy, or reliability
+                        of any Content or communications posted via the Services or endorse any
+                        opinions expressed via the Services. You understand that by using the Services,
+                        you may be exposed to Content that might be offensive, harmful, inaccurate or
+                        otherwise inappropriate, or in some cases, postings that have been mislabeled
+                        or are otherwise deceptive. Under no circumstances will Guud Times, Inc. be
+                        liable in any way for any Content, including, but not limited to, any errors or
+                        omissions in any Content, or any loss or damage of any kind incurred as a
+                        result of the use of any Content posted, emailed, transmitted or otherwise made
+                        available via the Services or broadcast elsewhere.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>5. Your Rights</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        You retain your rights to any
+                        Content you submit, post or display on or through the Services. By submitting,
+                        posting or displaying Content on or through the Services, you grant us a
+                        worldwide, non-exclusive, royalty-free license (with the right to sublicense)
+                        to use, copy, reproduce, process, adapt, modify, publish, transmit, display and
+                        distribute such Content in any and all media or distribution methods (now known
+                        or later developed).
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        Tip This license is you authorizing
+                        us to make your post to partyur available to the rest of the world and to let
+                        others do the same.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        You agree that this license
+                        includes the right for Guud Times, Inc. to provide, promote, and improve the
+                        Services and to make Content submitted to or through the Services available to
+                        other companies, organizations or individuals who partner with Guud Times, Inc.
+                        for the syndication, broadcast, distribution or publication of such Content on
+                        other media and services, subject to our terms and conditions for such Content
+                        use.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        Tip Guud Times, Inc. has an
+                        evolving set of rules for how ecosystem partners can interact with your
+                        Content. These rules exist to enable an open ecosystem with your rights in
+                        mind. But what’s yours is yours – you own your Content (and your photos are
+                        part of that Content).
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        Such additional uses by Guud Times,
+                        Inc., or other companies, organizations or individuals who partner with Guud
+                        Times, Inc., may be made with no compensation paid to you with respect to the
+                        Content that you submit, post, transmit or otherwise make available through the
+                        Services.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size: 12.0pt;font-family:"Times New Roman",serif'>
+                        You are responsible for your use of
+                        the Services, for any Content you provide, and for any consequences thereof,
+                        including the use of your Content by other users and our third party partners.
+                        You understand that your Content may be syndicated, broadcast, distributed, or
+                        published by our partners and if you do not have the right to submit Content
+                        for such use, it may subject you to liability. Guud Times, Inc. will not be
+                        responsible or liable for any use of your Content by Guud Times, Inc. in
+                        accordance with these Terms. You represent and warrant that you have all the
+                        rights, power and authority necessary to grant the rights granted herein to any
+                        Content that you submit.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            6. Your License To
+                            Use the Services
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Guud Times, Inc. gives you a
+                        personal, worldwide, royalty-free, non-assignable and non-exclusive license to
+                        use the software that is provided to you by Guud Times, Inc. as part of the
+                        Services. This license is for the sole purpose of enabling you to use and enjoy
+                        the benefit of the Services as provided by Guud Times, Inc., in the manner
+                        permitted by these Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            7. Guud Times,
+                            Inc. Rights
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        All right, title, and interest in
+                        and to the Services (excluding Content provided by users) are and will remain
+                        the exclusive property of Guud Times, Inc. and its licensors. The Services are
+                        protected by copyright, trademark, and other laws of both the United States and
+                        foreign countries. Nothing in the Terms gives you a right to use the partyur
+                        name or any of the partyur trademarks, logos, domain names, and other
+                        distinctive brand features. Any feedback, comments, or suggestions you may
+                        provide regarding partyur, or the Services is entirely voluntary and we will be
+                        free to use such feedback, comments or suggestions as we see fit and without
+                        any obligation to you.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            8. Restrictions on
+                            Content and Use of the Services
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Please review the partyur Rules
+                        (which are part of these Terms) to better understand what is prohibited on the
+                        Service. We reserve the right at all times (but will not have an obligation) to
+                        remove or refuse to distribute any Content on the Services, to suspend or
+                        terminate users, and to reclaim usernames without liability to you. We also
+                        reserve the right to access, read, preserve, and disclose any information as we
+                        reasonably believe is necessary to (i) satisfy any applicable law, regulation,
+                        legal process or governmental request, (ii) enforce the Terms, including
+                        investigation of potential violations hereof, (iii) detect, prevent, or
+                        otherwise address fraud, security or technical issues, (iv) respond to user
+                        support requests, or (v) protect the rights, property or safety of Guud Times,
+                        Inc., other users of the Services and the public.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Tip Guud Times, Inc. does not
+                        disclose personally identifying information to third parties except in
+                        accordance with our Privacy Policy.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Except as permitted through the
+                        Services, these Terms, you have to use the partyur API if you want to
+                        reproduce, modify, create derivative works, distribute, sell, transfer,
+                        publicly display, publicly perform, transmit, or otherwise use the Content or
+                        Services.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Tip We encourage and permit broad
+                        re-use of Content. The partyur API exists to enable this.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        If you use commerce features of the
+                        Services that require credit or debit card information, such as our Buy Now
+                        feature, you agree to our partyur Commerce Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        You may not do any of the following
+                        while accessing or using the Services: (i) access, tamper with, or use
+                        non-public areas of the Services, Guud Times, Inc.’s computer systems, or the
+                        technical delivery systems of Guud Times, Inc.’s providers; (ii) probe, scan,
+                        or test the vulnerability of any system or network or breach or circumvent any
+                        security or authentication measures; (iii) access or search or attempt to
+                        access or search the Services by any means (automated or otherwise) other than
+                        through our currently available, published interfaces that are provided by Guud
+                        Times, Inc. (and only pursuant to those terms and conditions), unless you have
+                        been specifically allowed to do so in a separate agreement with Guud Times,
+                        Inc. (NOTE: crawling the Services is permissible if done in accordance with the
+                        provisions of the robots.txt file, however, scraping the Services without the
+                        prior consent of Guud Times, Inc. is expressly prohibited); (iv) forge any
+                        TCP/IP packet header or any part of the header information in any email or
+                        posting, or in any way use the Services to send altered, deceptive or false
+                        source-identifying information; or (v) interfere with, or disrupt, (or attempt
+                        to do so), the access of any user, host or network, including, without
+                        limitation, sending a virus, overloading, flooding, spamming, mail-bombing the
+                        Services, or by scripting the creation of Content in such a manner as to
+                        interfere with or create an undue burden on the Services.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            9. Copyright
+                            Policy
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Guud Times, Inc. respects the
+                        intellectual property rights of others and expects users of the Services to do
+                        the same. We will respond to notices of alleged copyright infringement that
+                        comply with applicable law and are properly provided to us. If you believe that
+                        your Content has been copied in a way that constitutes copyright infringement,
+                        please provide us with the following information: (i) a physical or electronic
+                        signature of the copyright owner or a person authorized to act on their behalf;
+                        (ii) identification of the copyrighted work claimed to have been infringed;
+                        (iii) identification of the material that is claimed to be infringing or to be
+                        the subject of infringing activity and that is to be removed or access to which
+                        is to be disabled, and information reasonably sufficient to permit us to locate
+                        the material; (iv) your contact information, including your address, telephone
+                        number, and an email address; (v) a statement by you that you have a good faith
+                        belief that use of the material in the manner complained of is not authorized
+                        by the copyright owner, its agent, or the law; and (vi) a statement that the
+                        information in the notification is accurate, and, under penalty of perjury,
+                        that you are authorized to act on behalf of the copyright owner.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        We reserve the right to remove
+                        Content alleged to be infringing without prior notice, at our sole discretion,
+                        and without liability to you. In appropriate circumstances, Guud Times, Inc. will
+                        also terminate a user’s account if the user is determined to be a repeat
+                        infringer. Our designated copyright agent for notice of alleged copyright
+                        infringement appearing on the Services is:<i>
+                            <br>
+                            <br>
+                        </i>
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <i>
+                        <span lang=EN
+                              style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+                            Email: <u>
+                                <span style='color:blue'>copyright@partyur.com</span>
+                            </u>
+                        </span>
+                    </i>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            10. Ending These
+                            Terms
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        The Terms will continue to apply
+                        until terminated by either you or Guud Times, Inc. as follows.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        You may end your legal agreement
+                        with Guud Times, Inc. at any time for any reason by deactivating your accounts
+                        and discontinuing your use of the Services. You do not need to specifically
+                        inform Guud Times, Inc. when you stop using the Services. If you stop using the
+                        Services without deactivating your accounts, your accounts may be deactivated
+                        due to prolonged inactivity under our Inactive Account Policy.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        We may suspend or terminate your
+                        accounts or cease providing you with all or part of the Services at any time
+                        for any reason, including, but not limited to, if we reasonably believe: (i)
+                        you have violated these Terms or the partyur Rules, (ii) you create risk or
+                        possible legal exposure for us; or (iii) our provision of the Services to you
+                        is no longer commercially viable. We will make reasonable efforts to notify you
+                        by the email address associated with your account or the next time you attempt
+                        to access your account.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        In all such cases, the Terms shall
+                        terminate, including, without limitation, your license to use the Services,
+                        except that the following sections shall continue to apply: 4, 5, 7, 8, 10, 11,
+                        and 12.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Nothing in this section shall
+                        affect Guud Times, Inc.’s rights to change, limit or stop the provision of the
+                        Services without prior notice, as provided above in section 1.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            11.Disclaimers and
+                            Limitations of Liability
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Please read this section carefully
+                        since it limits the liability of Guud Times, Inc. and its parents,
+                        subsidiaries, affiliates, related companies, officers, directors, employees,
+                        agents, representatives, partners, and licensors (collectively, the “Guud Times
+                        Entities”). Each of the subsections below only applies up to the maximum extent
+                        permitted under applicable law. Some jurisdictions do not allow the disclaimer
+                        of implied warranties or the limitation of liability in contracts, and as a
+                        result the contents of this section may not apply to you. Nothing in this
+                        section is intended to limit any rights you may have which may not be lawfully
+                        limited.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            A. The Services
+                            are Available &quot;AS-IS&quot;
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        Your access to and use of the
+                        Services or any Content are at your own risk. You understand and agree that the
+                        Services are provided to you on an &quot;AS IS&quot; and &quot;AS
+                        AVAILABLE&quot; basis. Without limiting the foregoing, to the maximum extent
+                        permitted under applicable law, THE GUUD TIMES ENTITIES DISCLAIM ALL WARRANTIES
+                        AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A
+                        PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        The Guud Times Entities make no
+                        warranty and disclaim all responsibility and liability for: (i) the
+                        completeness, accuracy, availability, timeliness, security or reliability of
+                        the Services or any Content; (ii) any harm to your computer system, loss of
+                        data, or other harm that results from your access to or use of the Services or
+                        any Content; (iii) the deletion of, or the failure to store or to transmit, any
+                        Content and other communications maintained by the Services; and (iv) whether
+                        the Services will meet your requirements or be available on an uninterrupted,
+                        secure, or error-free basis. No advice or information, whether oral or written,
+                        obtained from the Guud Times Entities or through the Services, will create any
+                        warranty not expressly made herein.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>B. Links</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        The Services may contain links to
+                        third-party websites or resources. You acknowledge and agree that the Guud
+                        Times Entities are not responsible or liable for: (i) the availability or
+                        accuracy of such websites or resources; or (ii) the content, products, or
+                        services on or available from such websites or resources. Links to such
+                        websites or resources do not imply any endorsement by the Guud Times Entities
+                        of such websites or resources or the content, products, or services available
+                        from such websites or resources. You acknowledge sole responsibility for and
+                        assume all risk arising from your use of any such websites or resources.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            C. Limitation of
+                            Liability
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        TO THE MAXIMUM EXTENT PERMITTED BY
+                        APPLICABLE LAW, THE GUUD TIMES ENTITIES SHALL NOT BE LIABLE FOR ANY INDIRECT,
+                        INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS
+                        OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE,
+                        GOOD-WILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (i) YOUR ACCESS TO OR USE
+                        OF OR INABILITY TO ACCESS OR USE THE SERVICES; (ii) ANY CONDUCT OR CONTENT OF
+                        ANY THIRD PARTY ON THE SERVICES, INCLUDING WITHOUT LIMITATION, ANY DEFAMATORY,
+                        OFFENSIVE OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES; (iii) ANY CONTENT
+                        OBTAINED FROM THE SERVICES; OR (iv) UNAUTHORIZED ACCESS, USE OR ALTERATION OF
+                        YOUR TRANSMISSIONS OR CONTENT.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        IN NO EVENT SHALL THE AGGREGATE
+                        LIABILITY OF THE GUUD TIMES ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S.
+                        DOLLARS (U.S. $100.00) OR THE AMOUNT YOU PAID GUUD TIMES, IF ANY, IN THE PAST
+                        SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        THE LIMITATIONS OF THIS SUBSECTION
+                        SHALL APPLY TO ANY THEORY OF LIABILITY, WHETHER BASED ON WARRANTY, CONTRACT,
+                        STATUTE, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, AND WHETHER OR NOT THE GUUD
+                        TIMES ENTITIES HAVE BEEN INFORMED OF THE POSSIBILITY OF ANY SUCH DAMAGE, AND
+                        EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL
+                        PURPOSE.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>12. General Terms</span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            A. Waiver and
+                            Severability
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        The failure of Guud Times, Inc. to
+                        enforce any right or provision of these Terms will not be deemed a waiver of
+                        such right or provision. In the event that any provision of these Terms is held
+                        to be invalid or unenforceable, then that provision will be limited or
+                        eliminated to the minimum extent necessary, and the remaining provisions of
+                        these Terms will remain in full force and effect.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            B. Controlling Law
+                            and Jurisdiction
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        These Terms and any action related
+                        thereto will be governed by the laws of the State of Arizona without regard to
+                        or application of its conflict of law provisions or your state or country of
+                        residence. All claims, legal proceedings or litigation arising in connection
+                        with the Services will be brought solely in the federal or state courts located
+                        in Pheonix, Arizona, United States, and you consent to the jurisdiction of and
+                        venue in such courts and waive any objection as to inconvenient forum.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        If you are a federal, state, or
+                        local government entity in the United States using the Services in your
+                        official capacity and legally unable to accept the controlling law,
+                        jurisdiction or venue clauses above, then those clauses do not apply to you.
+                        For such U.S. federal government entities, these Terms and any action related
+                        thereto will be governed by the laws of the United States of America (without
+                        reference to conflict of laws) and, in the absence of federal law and to the
+                        extent permitted under federal law, the laws of the State of Arizona (excluding
+                        choice of law).
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <b>
+                        <span lang=EN
+                              style='font-size:13.5pt;font-family:"Times New Roman",serif'>
+                            C. Entire
+                            Agreement
+                        </span>
+                    </b>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        These Terms, the partyur Rules and
+                        our Privacy Policy are the entire and exclusive agreement between Guud Times,
+                        Inc. and you regarding the Services (excluding any services for which you have
+                        a separate agreement with Guud Times, Inc. that is explicitly in addition or in
+                        place of these Terms), and these Terms supersede and replace any prior
+                        agreements between Guud Times, Inc. and you regarding the Services. Other than
+                        members of the group of companies of which Guud Times, Inc. is the parent, no
+                        other person or company will be third party beneficiaries to the Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        We may revise these Terms from time
+                        to time, the most current version will always be at<u>
+                            <span style='color:blue'>
+                            </span>
+                        </u>partyur.com/terms. If the revision, in our sole discretion, is
+                        material we will notify you via e-mail to the email associated with your
+                        account. By continuing to access or use the Services after those revisions
+                        become effective, you agree to be bound by the revised Terms.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <span lang=EN style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>
+                        These Services are operated and
+                        provided by Guud Times, Inc . If you have any questions about these Terms,
+                        please contact us.
+                    </span>
+                </p>
+
+                <p class=MsoNormal style='line-height:normal'>
+                    <i>
+                        <span lang=EN
+                              style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+                            Effective: January
+                            15, 2016
+                        </span>
+                    </i>
+                </p>
+
+                <p class=MsoNormal>&nbsp;</p>
+
+
+            </div>
+        </div>
+        <div data-role="footer">
+            <a data-dismiss="modal" data-role="button" class="km-state-active" style="width:100%">Agree</a>
+        </div>
+    </div>
+
+
+    <div id="checkAuthCode" data-layout="auth" data-role="view">
+        <div data-role="header" class="headerSpace"></div>
+        <div class="greyLogo"></div>
+        <div class="inst">You have been sent a TXT message with an authorization code. Enter it in the box below.</div>
+        <div style="padding:10px">
+            <div class="form-group darkForm"><input id="authCode" style="text-transform:uppercase" placeholder="Authorization Code" /></div>
+
+            <a class="btn btn-block btn-social btn-guudtimes btn-lg" data-tap="app.validateAuthCode" data-role="touch">
+                <i class="fa fa-guudtimes"></i>
+                Activate My Account
+            </a>
+            <a class="btn btn-block btn-social btn-guudtimes-alt btn-lg" data-tap="app.resend" data-role="touch">
+                Resend My Activation Code
+            </a>
+            <a class="btn btn-block btn-social btn-guudtimes-alt btn-lg" data-tap="app.logout" data-role="touch">
+                Logout
+            </a>
+            <!--<div class="darkForm error">
+                You have entered an invalid auth code
+            </div>-->
+        </div>
+
+    </div>
+
+    <div id="home" data-role="view" data-title="Home" data-layout="main" data-init="app.partyFeed.init" data-use-native-scrolling="true">
+        <div style="padding:0px;padding-top:0;margin:auto;text-align:center">
+            <script data-role="emptylistview" type="text/template">
+                <div>
+                    <div>There are currently no posts<br />at any of your favorite locations</div><br /><br />
+                    <a class="btn btn-guudtimes-alt" href="#searchMap" data-role="button">Find Some Additional Favorites</a>
+                    <div class="empty-watermark"></div>
+                </div>
+            </script>
+
+            <ul data-role="listview"></ul>
+
+        </div>
+    </div>
+
+    <div id="myPosts" data-role="view" data-title="Home" data-layout="main" data-init="app.myFeed.init" data-use-native-scrolling="true">
+        <div style="padding:0px;padding-top:0;margin:auto;text-align:center">
+            <script data-role="emptylistview" type="text/template">
+                <div>
+                    <div>There are currently no posts<br />at any of your favorite locations</div><br /><br />
+                    <a class="btn btn-guudtimes-alt" href="#searchMap" data-role="button">Find Some Additional Favorites</a>
+                    <div class="empty-watermark"></div>
+                </div>
+            </script>
+
+            <ul data-role="listview"></ul>
+
+        </div>
+    </div>
+
+
+    <div id="help" data-role="view" data-title="Home" data-layout="main">
+
+        <div style="padding:15px;margin:auto;text-align:center">
+
+            HELP ME I DON'T KNOW HOW TO DO STUFF
+
+        </div>
+
+    </div>
+
+    <!--<div id="search" data-role="view" data-title="Home" data-layout="main">
+        <div style="width:100%;height:60px;background-color:#fafafa;margin:auto;text-align:center;line-height:60px;">Banner Image</div>
+        <div style="padding:15px">
+            <div class="form-group">
+                <input placeholder="Bar Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input placeholder="City State" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input placeholder="Zip Code" class="form-control" />
+            </div>
+            <a data-role="button" class="btn btn-default" href="#searchResults">Search</a>
+        </div>
+    </div>
+
+    <div id="searchResults" data-role="view" data-title="Home" data-layout="main">
+
+        <div style="width:100%;height:60px;background-color:#fafafa;margin:auto;text-align:center;line-height:60px;">Banner Image</div>
+
+        <a data-role="button" class="btn btn-default" href="#searchMap">Map View</a>
+
+    </div>-->
+
+    <div id="searchMap" data-role="view" data-layout="main" data-after-show="app.showMap" data-hide="app.hideMap" data-stretch="true">
+        <div id="map_canvas" class="_active">
+            <div id="searchHeader"></div>
+            <div id="searchList" data-role="scroller" style="height:100%">
+                <ul id="searchVenueList" data-role="listview" data-click="app.searchListSelect"></ul>
+            </div>
+            <div id="searchListPhotos" data-role="scroller" style="height:100%">
+                <ul id="searchVenueListPhotos" data-role="listview"></ul>
+            </div>
+            <div id="searchListPromos" data-role="scroller" style="height:100%">
+                <ul id="searchVenueListPromos" data-role="listview" data-click="app.searchListSelect"></ul>
+            </div>
+            <div id="searchBox"><input type="text" placeholder="Search (Venue, Address or Zip)" class="searchText" data-change="app.mapFilterChange" /><a><i class="fa fa-search"></i></a></div>
+            <div id="searchStatus"></div>
+        </div>
+    </div>
+
+    <div id="cameraLayout" data-id="camera" data-role="layout" data-show="app.showCameraLayout">
+        <div data-role="header" class="headerTop"><div></div></div>
+        <div data-role="header">
+            <div style="padding:10px;padding-bottom:0">
+                <label>My Current Location:</label>
+                <div class="venueName" data-bind="text: name">
+                    {Venue Name}
+                </div>
+                <div class="btn btn-guudtimes-alt notRightVenue" style="width:100%;" data-role="button" data-click="app.clearCurrentLocation">
+                    Wrong Location ?
+                </div>
+            </div>
+        </div>
+
+        <footer data-role="footer">
+            <div class="btn btn-guudtimes-alt notRightVenue" style="width:100%;" data-role="button" data-click="app.cancelCamera">
+                Cancel
+            </div>
+        </footer>
+    </div>
+
+    <div id="cameraPicker" data-role="view" data-layout="camera" style="overflow:auto" data-model="app.cameraView">
+
+        <div style="padding:10px;">
+            <div style="text-align:center;width:250px;margin:auto" class="pickerBtn" data-role="touch" data-tap="app.camera" data-hold="app.file">
+                <i class="gt-o-camera" style="font-size:120px;color:rgba(255,255,255,.7)"></i>
+                <div>Create Photo Post</div>
+            </div>
+
+            <div style="text-align:center;width:250px;margin:auto;opacity:.2" class="pickerBtn" data-role="touch">
+                <!--data-tap="app.video"-->
+                <i class="gt-o-video" style="font-size:135px;color:rgba(255,255,255,.7)"></i>
+                <div>Create Video Post</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cameraPostLayout" data-id="cameraPost" data-role="layout">
+
+        <footer data-role="footer">
+            <div class="btn btn-guudtimes-alt notRightVenue" style="width:100%;" data-role="button" data-click="app.cancelCamera">
+                Cancel
+            </div>
+        </footer>
+    </div>
+
+    <div id="cameraPost" data-role="view" data-layout="cameraPost" data-model="app.postContent" style="overflow:auto">
+        <div data-role="header" class="headerTop"><div></div></div>
+        <div style="position:relative;">
+            <div id="preview">
+
+            </div>
+            <div id="postEditor">
+                <textarea id="postContent" style="width:100%;height:100px;" placeholder="Enter Post Here..." data-bind="value:content"></textarea>
+                <select id="postDurration" style="background-color:rgba(0,0,0,.0)" data-type="number" data-bind="value:expirePolicy">
+                    <option value="0">Auto delete at 5:00 am</option>
+                    <option value="1">Auto delete at 3:00 am</option>
+                    <option value="2">Auto delete at 12:00 am</option>
+                    <option value="3">Auto delete in 1 hour</option>
+                    <option value="4">Auto delete in 15 minutes</option>
+                </select>
+                <a class="btn btn-primary pull-right" data-role="touch" data-tap="app.postPost">
+                    Complete Post
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile" data-role="view" data-model="app.profile" data-layout="main" data-use-native-scrolling="true">
+
+        <!--<ul data-role="listview" data-style="inset" data-type="group" >
+            <li>-->
+        <div style="position:relative;overflow:hidden;height:140px;width:100vw">
+
+            <div id="profile-photo-blur" style="position:absolute;left:-30px;top:-30px;height:200px;width:150vw;
+            background-image:url('http://guudtimes.s3.amazonaws.com/photos/55cfdd9f475c701c235b5bea.jpg');
+            -webkit-filter: blur(10px);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            background-color:#000">
+            </div>
+            <div id="profile-photo"
+                 style="height:100px;
+                margin:auto;
+                -webkit-filter: blur(0);
+                margin-top:10px;
+                width:100px;
+                border-radius:100px;
+                border:3px solid #fff;
+                background-size:cover;
+                background-position:center;
+                background-image:url('http://guudtimes.s3.amazonaws.com/photos/55cfdd9f475c701c235b5bea.jpg');" data-role="touch" data-tap="app.profilePicture">
+            </div>
+            <span data-bind="text:screenName" style="-webkit-filter: blur(0);margin:auto;text-align:center;display:block;color:#fff;"> </span>
+        </div>
+
+        <div style="padding:10px;">
+            <!--<div style="padding:10px">
+                <label>My Profile</label>
+            </div>-->
+            <div style="padding:10px;padding-top:0">
+                <!--<div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" data-bind="value:email" />
+                    <div class="btn-Verify">Verified</div>
+                </div>-->
+                <div class="form-group">
+                    <label>Screen Name</label>
+                    <input type="text" placeholder="Screen Name" data-bind="value:screenName" />
+                </div>
+                <div class="form-group">
+                    <label>Mood</label>
+                    <select style="width:100%;background-color:transparent;border:none;color:#909090;" data-bind="value:mood">
+                        <option>Mood</option>
+                        <option>😀 Grinning Face</option>
+                        <option>😁 Grinning Face With Smiling Eyes</option>
+                        <option>😂 Face With Tears Of Joy</option>
+                        <option>😃 Smiling Face With Open Mouth</option>
+                        <option>😄 Smiling Face With Open Mouth And Smiling Eyes</option>
+                        <option>😅 Smiling Face With Open Mouth And Cold Sweat</option>
+                        <option>😆 Smiling Face With Open Mouth And Tightly-Closed Eyes</option>
+                        <option>😇 Smiling Face With Halo</option>
+                        <option>😈 Smiling Face With Horns</option>
+                        <option>👿 Imp</option>
+                        <option>😉 Winking Face</option>
+                        <option>😊 Smiling Face With Smiling Eyes</option>
+                        <option>☺️ White Smiling Face</option>
+                        <option>😋 Face Savouring Delicious Food</option>
+                        <option>😌 Relieved Face</option>
+                        <option>😍 Smiling Face With Heart-Shaped Eyes</option>
+                        <option>😎 Smiling Face With Sunglasses</option>
+                        <option>😏 Smirking Face</option>
+                        <option>😐 Neutral Face</option>
+                        <option>😑 Expressionless Face</option>
+                        <option>😒 Unamused Face</option>
+                        <option>😓 Face With Cold Sweat</option>
+                        <option>😔 Pensive Face</option>
+                        <option>😕 Confused Face</option>
+                        <option>😖 Confounded Face</option>
+                        <option>😗 Kissing Face</option>
+                        <option>😘 Face Throwing A Kiss</option>
+                        <option>😙 Kissing Face With Smiling Eyes</option>
+                        <option>😚 Kissing Face With Closed Eyes</option>
+                        <option>😛 Face With Stuck-Out Tongue</option>
+                        <option>😜 Face With Stuck-Out Tongue And Winking Eye</option>
+                        <option>😝 Face With Stuck-Out Tongue And Tightly-Closed Eyes</option>
+                        <option>😞 Disappointed Face</option>
+                        <option>😟 Worried Face</option>
+                        <option>😠 Angry Face</option>
+                        <option>😡 Pouting Face</option>
+                        <option>😢 Crying Face</option>
+                        <option>😣 Persevering Face</option>
+                        <option>😤 Face With Look Of Triumph</option>
+                        <option>😥 Disappointed But Relieved Face</option>
+                        <option>😦 Frowning Face With Open Mouth</option>
+                        <option>😧 Anguished Face</option>
+                        <option>😨 Fearful Face</option>
+                        <option>😩 Weary Face</option>
+                        <option>😪 Sleepy Face</option>
+                        <option>😫 Tired Face</option>
+                        <option>😬 Grimacing Face</option>
+                        <option>😭 Loudly Crying Face</option>
+                        <option>😮 Face With Open Mouth</option>
+                        <option>😯 Hushed Face</option>
+                        <option>😰 Face With Open Mouth And Cold Sweat</option>
+                        <option>😱 Face Screaming In Fear</option>
+                        <option>😲 Astonished Face</option>
+                        <option>😳 Flushed Face</option>
+                        <option>😴 Sleeping Face</option>
+                        <option>😵 Dizzy Face</option>
+                        <option>😶 Face Without Mouth</option>
+                        <option>😷 Face With Medical Mask</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>About</label>
+                    <input type="text" placeholder="About You" data-bind="value:about" />
+                </div>
+                <div class="form-group" style="margin-bottom:40px">
+                    <label>Relationship Status</label>
+                    <select style="width:100%;background-color:transparent;border:none;color:#909090;" data-bind="value:status">
+                        <option value="0">Dont Show</option>
+                        <option value="1">Single</option>
+                        <option value="2">Looking</option>
+                    </select>
+                </div>
+                <label>Favorites</label>
+                <div style="border:dashed 1px #dadada;border-radius:10px;padding:10px;padding-top:20px;">
+                    <div class="form-group" style="text-transform:none;border-bottom:none;">
+                        Show Favorites On Posts
+                        <div style="position:relative;margin-top:-10px;" class="pull-right">
+                            <input data-role="switch" id="email-switch" checked="checked" title="Show Profile" data-bind="checked:show" /><div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><input type="text" placeholder="Favorite Drink" data-bind="value:drink" /></div>
+                    <div class="form-group"><input type="text" placeholder="Favorite Party" data-bind="value:party" /></div>
+                </div>
+            </div>
+        </div>
+        <!--</li>
+        </ul>-->
+
+
+    </div>
+
+    <div id="verifyEmail" data-role="view" data-layout="main">
+        <div style="padding:10px;min-height:60vh;">
+            You must add and verify your email address in the account info menu prior to adding a location<br /><br />
+            <a class="btn btn-guudtimes-alt" href="#linkedAccounts" data-role="button">Open Account Info</a>
+
+            <div class="empty-watermark"></div>
+        </div>
+    </div>
+
+    <div id="add" data-role="view" data-layout="main" data-init="app.locationManager.init">
+
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <div class="manageListActive">
+                    <label>Manage Your Locations</label>
+                    <ul id="venueManageList" data-role="listview" data-template="venueListItem"></ul>
+                    <br /><br />
+                </div>
+                <div class="claimListActive">
+                    <label>Claim A Nearby Location</label>
+                    <ul id="venueClaimList" data-role="listview" data-template="venueListItem" data-click="app.claimLocation"></ul>
+                    <br /><br />
+                </div>
+                <label>Add A New Location</label>
+                <ul>
+                    <li data-icon="mostrecent"><a href="#addBusiness?location">Add A New Location</a></li>
+                    <li data-icon="toprated" style="display:none"><a href="#addBusiness?event">Add A New Event</a></li>
+                    <!--<li data-icon="toprated"><a>An Event</a></li>-->
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="layoutManageLocation" data-id="ManageLocation" data-role="layout">
+        <div class="headerTop" data-role="header"><div></div></div>
+        <div data-role="header">
+            <div data-role="navbar" style="background-image:url('img/topLogo.png');background-size:150px; background-repeat:no-repeat;background-position:center;">
+                <a id="lb" data-role="button" data-click="app.topNav" data-rel="drawer" href="#appDrawer" data-align="left"><i class="fa fa-bars"></i></a>
+                <a id="rb" style="visibility:hidden;" data-role="button" data-click="app.topNav" data-rel="drawer" href="#rightDrawer" data-align="right" data-icon="favorites"></a>
+            </div>
+        </div>
+        <!--<div data-role="header">
+            <div id="searchToggle" data-role="tabstrip" class="light" data-select="app.mapNav">
+                <a><i class="fa fa-map-marker"></i>Map</a>
+                <a><i class="fa fa-list"></i>List</a>
+                <a><i class="fa fa-camera"></i>Photo</a>
+            </div>
+        </div>-->
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+            <div data-role="tabstrip" data-select="app.mainNav" class="main-nav">
+                <a data-icon="info" data-role="button" href="#manageLocationSpecials">
+                    Info
+                </a>
+                <a data-icon="globe" data-role="button" href="#manageLocationStats">
+                    Stats
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <div id="manageLocationSpecials" data-role="view" data-layout="ManageLocation">
+        <div style="padding:20px">
+            <b>
+                <span data-bind="text:name">
+                    {location}
+                </span>
+            </b>
+            <br /><br />
+            <label>Current Promo</label>
+            <div class="form-group">
+                <input style="width:100%" data-bind="value:promo" placeholder="No Current Promo" data-id="promoText" />
+            </div>
+            <div class="pull-right">
+                <a data-role="button" href="#add">Cancel</a> <a data-role="button" data-bind="click:update">Update Promo</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="manageLocationStats" data-role="view" data-layout="ManageLocation">
+        <div style="padding:20px">
+            Venue Stats
+            <br /><br />
+            Coming Soon
+        </div>
+    </div>
+
+
+    <div id="confirmClaim" data-role="view" data-layout="main">
+        <div style="padding:10px;">
+            Are you sure you are allowed to claim this location ?<br /><br />
+            <a class="btn btn-guudtimes-alt" bs-alert="alert" data-role="button" data-click="app.confirmClaim">Claim This Location</a><br />
+            <br /><div class="alert alert-success alert-dismissible" role="alert" style="display:none">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><b>Congratulations</b><br />You have claimed this location.<br /><br />
+                <a class="btn btn-guudtimes-alt" data-role="button" href="#add">Open Location Manager</a><br />
+            </div>
+        </div>
+
+    </div>
+
+    <div id="addBusiness" data-role="view" data-layout="main" data-init="app.locationManager.initAdd">
+
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <form style="padding:0">
+                    <div style="padding:0">
+                        <label>Add A Location</label>
+                    </div>
+                    <div style="padding:0;padding-top:0">
+                        <div class="form-group"><input type="text" required="required" data-bind="value:name" placeholder="Business Name" /></div>
+                        <div class="form-group"><input type="tel" required="required" data-bind="value:phone" data-id="phone" style="padding-left: 48px;" placeholder="Main Phone Number" /></div>
+
+                        <div class="form-group"><input type="text" data-bind="value:address1" placeholder="Street Address" /></div>
+
+                        <div class="form-group"><input type="text" required="required" data-bind="value:city, readonly:city" readonly="readonly" placeholder="City" /></div>
+                        <div class="form-group"><input type="number" data-type="number" required="required" data-bind="value:zip, readonly:zip" readonly="readonly" placeholder="Zip Code" /></div>
+
+                        <div class="form-group"><input type="text" data-bind="value:loc" readonly="readonly" style="width:100%" /></div>
+                        <div class="pull-right">
+                            <a data-role="button" href="#add">Cancel</a> <a data-id="add" data-role="button">Add Business</a>
+                        </div>
+                    </div>
+                </form>
+            </li>
+        </ul>
+
+        <!--<ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                What would you like to add
+                <ul>
+                    <li data-icon="toprated"><a>A Business</a></li>
+                    <li data-icon="toprated"><a>A Party</a></li>
+                    <li data-icon="toprated"><a>An Event</a></li>
+                </ul>
+            </li>
+        </ul>-->
+
+    </div>
+
+    <script id="postListItem" type="text/template">
+        <div>
+            <h2 class="wallTitle">
+                #  try{ if(authorScreenName){ # #: authorScreenName  #  #  } } catch(ex) { # someone # } #  #: kendo.toString(createdDate, 'MM/dd/yyyy') #</span>
+            </h2>
+            <div class="wallImages" style="background-image:url('http://guudtimes.s3.amazonaws.com/photos/#: _id #.jpg')" data-uid="#: uid #" data-role="touch" data-tap="app.selfieView.view">
+                <span class="wallContent">
+                    #  try{ if(content){ # #: content #  #  } } catch(ex) { } #
+                </span>
+                #if (alreadyCheers){ #
+                <div class="btn-group">
+                    <a data-role="button" disabled="disabled" data-post-id="#: _id #" data-click="app.cheers"><i class="fa fa-beer"></i></a>
+                </div>
+                # }
+                else if (isNotMe)
+                { #
+                <div class="btn-group">
+                    <a data-role="button" data-post-id="#: _id #" data-click="app.cheers"><i class="fa fa-beer"></i></a>
+                </div>
+                #}#
+            </div>
+        </div>
+    </script>
+
+    <script id="promoListItem" type="text/template">
+        <div class="promoItem">
+            <a data-role="listview-link">#:promo#</a>
+        </div>
+    </script>
+
+    <script id="feedListItem" type="text/template">
+        <div>
+            <div class="wallImages" style="background-image:url('http://guudtimes.s3.amazonaws.com/photos/#: _id #.jpg')" data-uid="#: uid #" data-role="touch" data-tap="app.selfieView.view">
+                <span class="wallContent">
+                    #  try{ if(content && content.length > 0 ){ #<span><i class="fa fa-bullhorn announce"></i> #: content # </span>#  } } catch(ex) { } #
+                    #  try{ if(locationName && locationName.length > 0 ){ # <span><i class="fa fa-map-marker"></i> #: locationName # </span> #  } } catch(ex) { } #
+                </span>
+                #if (isNotMe && alreadyCheers){ #
+                <div class="btn-group">
+                    <a data-role="button" disabled="disabled" data-post-id="#: _id #" data-click="app.cheers"><i class="fa fa-beer"></i></a>
+                </div>
+                #}
+                else if (isNotMe)
+                {#
+                <div class="btn-group">
+                    <a data-role="button" data-post-id="#: _id #" data-click="app.cheers"><i class="fa fa-beer"></i></a>
+                </div>
+                #}
+                else if (isMe)
+                {#
+                <div class="btn-group">
+                    <div style="height:40px;width:40px;text-align:center;font-size:14px;color:\\#fff;text-shadow:0 0 2px \\#000;">
+                        <i class="fa fa-beer" style="font-size:12px"></i>
+                        #:cheers.length#
+                    </div>
+                </div>
+                #}#
+            </div>
+            <div class="wallTitleContainer">
+                <h2 class="wallTitle pull-left">
+                    #
+                    try
+                    {
+                    switch(authorStatus)
+                    {
+                    case 1:
+                    {
+                    #
+                    <span class="pull-left single">S</span>
+                    #
+                    break;
+                    }
+                    case 2:
+                    {
+                    #
+                    <span class="pull-left looking">L</span>
+                    #
+                    break;
+                    }
+                    }
+                    }
+                    catch(ex)
+                    {
+
+                    }
+                    #
+                    #  try{ if(authorScreenName){ # #: authorScreenName  #  #  } } catch(ex) { # someone # } #
+                </h2>
+                <span class="postDate pull-right">#: app.moment(createdDate).twitterShort() #</span>
+            </div>
+
+        </div>
+    </script>
+
+    <div id="myPartyView" data-role="view" data-layout="main" data-init="app.partyView.init" data-use-native-scrolling="true">
+        <div>
+            <div style="padding:5px;padding-top:0;margin:auto;text-align:center">
+                <div style="border-bottom:#dadada solid 1px;height:40px;margin-bottom:10px;line-height: 38px;">
+                    <i class="fa fa-star-o pull-left btn-favorite" data-role="button" data-click="onFavorite"></i>
+                    <label data-bind="text:name" class="venueName"></label>
+                    <i class="fa fa-caret-square-o-down pull-right" style="position:absolute;top:0;right:4px;" data-role="button" data-click="app.switchCurrentLocation"></i>
+                </div>
+                <div class="viewPromo" data-bind="{text:promo, visible:promo}"></div>
+                <script data-role="emptylistview" type="text/template">
+                    <div>
+                        There are currently no posts<br />at your location yet<br /><br />
+                        <div id="venueIsCurrent">
+                            <a class="btn btn-primary btn-guudtimes-alt createPost">Create A Post</a>
+                        </div>
+                        <div class="empty-watermark"></div>
+                    </div>
+                </script>
+                <ul id="myPartyPostList" data-role="listview" data-template="postListItem"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="venueView" data-role="view" data-layout="main" data-init="app.venueView.init" data-use-native-scrolling="true">
+        <div>
+            <div style="padding:5px;padding-top:0;margin:auto;text-align:center">
+                <div style="border-bottom:#dadada solid 1px;height:40px;margin-bottom:10px;line-height: 38px;">
+                    <i class="fa fa-star-o pull-left btn-favorite" data-role="button" data-click="onFavorite"></i>
+                    <label data-bind="text:name" class="venueName"></label>
+                    <!--<i class="fa fa-caret-square-o-down pull-right" data-role="button" style="visibility:hidden" data-click="app.switchCurrentLocation"></i>-->
+                </div>
+                <div class="viewPromo" data-bind="{text:promo, visible:promo}"></div>
+                <script data-role="emptylistview" type="text/template">
+                    <div>
+                        There are currently no posts<br />at this location<br /><br />
+                        <div class="empty-watermark"></div>
+                    </div>
+                </script>
+
+                <ul id="venuePostList" data-role="listview" data-template="postListItem"></ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="selfieView" data-role="modalview" data-layout="main" style="width: 96vw;height:95vh;margin-top:10px;display:none;" data-init="app.selfieView.init" data-stretch="true">
+        <!--
+            <div data-role="navbar">
+                <span data-bind="text:authorScreenName"></span>
+                <a data-click="close" data-role="button" data-align="right" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>-->
+        <div data-role="header">
+            <div data-role="navbar" style="background-color:rgba(0,0,0,0);min-height:50px;">
+                <div data-bind="visible:authorScreenName">
+
+                    <span data-bind="visible:authorStatus == 1" style="margin-top:12px;font-family:Passion One;font-size:22px;color:#ffffff;text-align:center;line-height:26px;padding-right:1px;background-color:rgb(255, 106, 0);border-radius:90px;width:24px;height:24px;display:inline-block;margin-right:5px" class="pull-left">S</span>
+
+                    <span data-bind="visible:authorStatus == 2" style="margin-top:12px;font-family:Passion One;font-size:22px;color:#ffffff;text-align:center;line-height:26px;padding-right:1px;background-color:#b200ff;border-radius:90px;width:24px;height:24px;display:inline-block;margin-right:5px;" class="pull-left">L</span>
+
+                    <span data-bind="text:authorScreenName" style="font-weight:400"></span>
+                </div>
+                <a data-action="share" data-role="button" data-align="right" aria-label="Share"><i class="fa fa-share"></i></a>
+                <a data-click="close" data-role="button" data-align="right" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <!--<div class="imageSurface">
+
+        </div>-->
+        <div class="profileInfo">
+            <div style="position:relative;">
+                <div class="btn-group" style="position: absolute;top: -106px; right: 0; font-size: 39px;" data-bind="visible:isNotMe">
+                    <!--<a data-role="button" data-rel="modalview" data-click="app.selfieView.view" data-pic-id="#: _id #"><i class="fa fa-eye"></i></a>-->
+                    <a data-role="button" data-click="app.selfieView.cheers"><i class="fa fa-beer"></i></a>
+                </div>
+                <div class="btn-group" style="position: absolute;top: -106px; right: 0; font-size: 39px;" data-bind="visible:isMe">
+                    <!--<a data-role="button" data-rel="modalview" data-click="app.selfieView.view" data-pic-id="#: _id #"><i class="fa fa-eye"></i></a>-->
+                    <!--<a data-role="button"><span data-bind="text:cheers.length"></span></a>-->
+                </div>
+
+            </div>
+            <div style="line-height:1.5em;text-transform:none;">
+                <div style="font-weight:400" data-bind="visible:content"><i class=" fa fa-bullhorn" style="margin-right:5px;width:24px;display:inline-block;text-align: center; color:#fffbe0; "></i><span data-bind="visible:content,text:content"></span></div>
+                <div data-bind="visible:locationName"><i class="fa fa-map-marker" style="margin-right:5px;width:24px;display:inline-block;text-align: center; color: #f14e10;"></i><span data-bind="text:locationName" style="font-weight:400"></span></div>
+                <div data-bind="visible:locationName" style=" height:2px;border-top:dashed 1px rgba(255,255,255,.1);margin-top:4px;margin-bottom:4px;"></div>
+                <div data-bind="visible:favDrink"><i class="fa fa-glass" style="margin-right:5px;width:24px;display:inline-block;text-align: center; "></i><span data-bind="text:favDrink" style="font-weight:400"></span></div>
+                <div data-bind="visible:about"><i class="fa fa-diamond" style="margin-right:5px;width:24px;display:inline-block;text-align: center; color:#bdfeff;"></i><span data-bind="text:about" style="font-weight:400"></span></div>
+                <div data-bind="visible:favParty"><i class="fa fa-location-arrow" style="margin-right:5px;width:24px;display:inline-block;text-align: center; "></i><span data-bind="text:favParty" style="font-weight:400"></span></div>
+                <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:1em;font-weight:normal">
+                    <a data-role="button" data-click="app.selfieView.report">Report !</a>
+                </div>
+            </div>
+        </div>
+        <!--<div data-role="footer">
+            <a data-role="button" style="width:100%"><i class="fa fa-beer">Cheers</i></a>
+        </div>-->
+    </div>
+
+    <div id="cheersAnimation" data-role="modalview" data-layout="main" style="width: 90vw;">
+        Cheers&nbsp;!!!
+    </div>
+
+    <div id="favoriteAnimation" data-role="modalview" data-layout="main" style="width: 90vw;">
+        Added To Favorites
+    </div>
+
+    <div id="current" data-role="view" data-model="APP.models.current" data-title="Home" data-layout="main" data-after-show="app.showCurrent">
+    </div>
+
+    <script id="venueListItem" type="text/template">
+        <a data-icon="toprated" data-id="#: venue._id #" data-lng="#: venue.loc.coordinates[0] #" data-lat="#: venue.loc.coordinates[1] #">#: venue.name #</a>
+    </script>
+
+    <script id="searchVenueListItem" type="text/template">
+        <a data-id="#: _id #" data-role="listview-link">#: name #</a>
+        <a data-role="button" data-location-id="#: _id #" class="pull-right"><i class="fa # try{ if(isFavorite){ #fa-star# } else { #fa-star-o#}}catch(ex){}#"></i></a>
+    </script>
+
+    <script id="favoriteListItem" type="text/template">
+        <a data-id="#: _id #" data-role="listview-link" class="top10listItem pull-left">
+            <i class="activity pull-left"></i>
+            #: name #
+        </a>
+        <a data-role="button" data-location-id="#: _id #" class="pull-right"><i class="fa fa-trash"></i></a>
+    </script>
+
+    <div id="whereAreYou" data-role="view" data-title="Home" data-layout="main" data-after-show="app.showCurrent">
+        <ul data-role="listview" data-style="inset" data-type="group" data-click="app.selectLocation">
+            <li>
+                Where are you @ ?
+                <ul id="venueList" data-role="listview" data-template="venueListItem"></ul>
+            </li>
+        </ul>
+        <div id="venueListNone">
+            <div class="alert alert-info">You are not currently in a<br />participating location</div><br />
+
+            <br /><br /><a class="btn btn-guudtimes-alt" href="#add" data-role="button">Add This Location ?</a>
+        </div>
+        <!--<div id="video_container"></div>-->
+    </div>
+
+    <div id="myLocations" data-role="view" data-layout="main">
+
+        <ul data-role="listview" data-style="inset" data-type="group" data-click="app.selectLocation">
+            <li>
+                <label>My Locations</label>
+                <ul id="venueList" data-role="listview" data-template="venueListItem"></ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="linkedAccounts" data-role="view" data-title="Debug Mode" data-layout="main" data-init="app.validAccountsView.init">
+        <div style="padding:10px;">
+            <form>
+                <div data-bind="attr: { class:phoneVerStateClass() }">
+                    <label>Phone Number</label>
+                    <input type="tel" readonly name="tel" data-parsley-trigger="keyup" placeholder="Phone Number" data-bind="value:phone" />
+                    <div class="badge btn-Verify">Verified</div>
+                </div>
+
+                <div data-bind="attr: { class:emailVerStateClass() }">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Email" data-parsley-trigger="keyup" data-bind="value:email" />
+                    <div class="badge btn-Verify">Verified</div>
+                    <div class="badge btn-Verifying">Sending Verification Email<span class="ellipsis"></span></div>
+                    <div class="badge btn-Resend">Verification Pending - Resend ?</div>
+                    <div class="badge btn-Error">Error</div>
+                </div>
+
+                <!--<a class="btn btn-guudtimes-alt" data-role="button">Change Password</a><br />-->
+                <!--<br />-->
+                <!--<div class="alert alert-info alert-dismissible" role="alert" style="display:none">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Your verification email has been sent.
+                </div>-->
+
+                <br />
+                <label>Other Accounts</label>
+                <div style="position:relative">
+                    <div disabled style="opacity:.3">
+                        <div class="btn btn-block btn-social btn-facebook btn">
+                            <i class="fa fa-facebook"></i>
+                            Add Facebook Account
+                        </div>
+
+                        <div class="btn btn-block btn-social btn-instagram btn">
+                            <i class="fa fa-instagram"></i>
+                            Add Instagram Account
+                        </div>
+
+                        <div class="btn btn-block btn-social btn-foursquare btn">
+                            <i class="fa fa-foursquare"></i>
+                            Add Foursquare Account
+                        </div>
+
+                        <div class="btn btn-block btn-social btn-twitter btn">
+                            <i class="fa fa-twitter"></i>
+                            Add Twitter Account
+                        </div>
+                    </div>
+                    <div style="position:absolute;top:50%;text-align:center;font-weight:800;font-family:'Passion One';margin-top:-20px;font-size:40px;width:100%;">Coming Soon</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="debug" data-role="view" data-title="Debug Mode" data-model="app.appViewModel" data-layout="main">
+
+        <div style="padding:10px;">
+            <div><label>Display Settings</label></div>
+            <div class="form-group" style="text-transform:none;display:none">
+                Use Debug Server:
+                <div style="position:relative;margin-top:-4px;" class="pull-right">
+                    <input data-role="switch" data-bind="checked: debug" title="Show Profile" />
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+            <div class="form-group" style="text-transform:none;display:none">
+                Near Distance:
+                <div style="position:relative;margin-top:-4px;" class="pull-right">
+                    <input type="text" data-bind="value:distance" data-role="slider" />
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+            <div class="form-group" style="text-transform:none">
+                Use 2 Column Layout:
+                <div style="position:relative;margin-top:-4px;" class="pull-right">
+                    <input data-role="switch" data-bind="checked: twoColumn" title="Enable Two Column Layout" />
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="drawer" id="appDrawer" style="width: 80%" data-title="Options" data-position="left" data-swipe-to-open="false" data-init="app.appDrawer.init">
+        <div class="headerTopDrawer" data-role="header"><div></div></div>
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+        <ul data-role="listview" data-click="app.navigateDrawer">
+            <li>
+                <a href="#profile"><i class="fa fa-user"></i>User Profile</a>
+            </li>
+            <li>
+                <a href="#linkedAccounts"><i class="fa fa-check-square-o"></i>Account Info</a>
+            </li>
+            <li>
+                <a href="#myPosts"><i class="fa fa-camera-retro"></i>Post History</a>
+            </li>
+            <li>
+                <a href="#add"><i class="fa fa-map-marker"></i><span class="lblText lblAddLocation">Add A Location</span><span class="lblText lblManageLocation">Location Manager</span></a>
+            </li>
+            <li>
+                <a href="#debug"><i class="fa fa-wrench"></i>Display Settings</a>
+            </li>
+            <li style="display:none">
+                <a href="#help"><i class="fa fa-life-ring"></i>Help / Support</a>
+            </li>
+            <li>
+                <a href="#landing"><i class="fa fa-sign-out"></i>Log Out</a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="drawer" id="rightDrawer" style="width: 80%" data-title="My Top 10" data-position="right" data-swipe-to-open="false" data-init="app.favoritesDrawer.init">
+        <div class="headerTopDrawer" data-role="header"><div></div></div>
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+        <ul data-role="listview"></ul>
+    </div>
+
+    <script type="text/javascript">
+        var app = null;
+        require(['index'], function (Application) {
+            app = Application;
+            Application.initialize();
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,3038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <ProjectHome />
+    <ProjectName>partyur</ProjectName>
+    <ToolsVersionPromptShown>1.7</ToolsVersionPromptShown>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>e46aea1e-a559-41e2-b138-fca9e2289bfd</ProjectGuid>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".abignore" />
+    <Content Include=".abproject" />
+    <Content Include=".debug.abproject" />
+    <Content Include=".gitattributes">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include=".gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include=".release.abproject" />
+    <Content Include="App_Resources\Android\AndroidManifest.xml" />
+    <Content Include="App_Resources\Android\drawable-hdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-hdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-ldpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-mdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-xhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-xxhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-land-xxxhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-ldpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\splashscreen.png" />
+    <Content Include="App_Resources\Android\xml\config.xml" />
+    <Content Include="App_Resources\iOS\config.xml" />
+    <Content Include="App_Resources\iOS\Info.plist" />
+    <Content Include="App_Resources\iOS\watch-172x172.png" />
+    <Content Include="App_Resources\iOS\watch-196x196.png" />
+    <Content Include="App_Resources\iOS\watch-48x48.png" />
+    <Content Include="App_Resources\iOS\watch-55x55.png" />
+    <Content Include="App_Resources\iOS\watch-58x58.png" />
+    <Content Include="App_Resources\iOS\watch-80x80.png" />
+    <Content Include="App_Resources\iOS\watch-87x87.png" />
+    <Content Include="App_Resources\iOS\watch-88x88.png" />
+    <Content Include="App_Resources\WP8\SplashScreenImage.screen-720p.jpg" />
+    <Content Include="App_Resources\WP8\SplashScreenImage.screen-WVGA.jpg" />
+    <Content Include="bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\animate.css\.bower.json" />
+    <Content Include="bower_components\animate.css\animate-config.json" />
+    <Content Include="bower_components\animate.css\animate.css" />
+    <Content Include="bower_components\animate.css\animate.min.css" />
+    <Content Include="bower_components\animate.css\bower.json" />
+    <Content Include="bower_components\animate.css\Gruntfile.js" />
+    <Content Include="bower_components\animate.css\package.json" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\bounce.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\flash.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\jello.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\pulse.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\rubberBand.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\shake.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\swing.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\tada.css" />
+    <Content Include="bower_components\animate.css\source\attention_seekers\wobble.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_entrances\bounceIn.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_entrances\bounceInDown.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_entrances\bounceInLeft.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_entrances\bounceInRight.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_entrances\bounceInUp.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_exits\bounceOut.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_exits\bounceOutDown.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_exits\bounceOutLeft.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_exits\bounceOutRight.css" />
+    <Content Include="bower_components\animate.css\source\bouncing_exits\bounceOutUp.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeIn.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInDown.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInDownBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInLeft.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInLeftBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInRight.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInRightBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInUp.css" />
+    <Content Include="bower_components\animate.css\source\fading_entrances\fadeInUpBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOut.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutDown.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutDownBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutLeft.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutLeftBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutRight.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutRightBig.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutUp.css" />
+    <Content Include="bower_components\animate.css\source\fading_exits\fadeOutUpBig.css" />
+    <Content Include="bower_components\animate.css\source\flippers\flip.css" />
+    <Content Include="bower_components\animate.css\source\flippers\flipInX.css" />
+    <Content Include="bower_components\animate.css\source\flippers\flipInY.css" />
+    <Content Include="bower_components\animate.css\source\flippers\flipOutX.css" />
+    <Content Include="bower_components\animate.css\source\flippers\flipOutY.css" />
+    <Content Include="bower_components\animate.css\source\lightspeed\lightSpeedIn.css" />
+    <Content Include="bower_components\animate.css\source\lightspeed\lightSpeedOut.css" />
+    <Content Include="bower_components\animate.css\source\rotating_entrances\rotateIn.css" />
+    <Content Include="bower_components\animate.css\source\rotating_entrances\rotateInDownLeft.css" />
+    <Content Include="bower_components\animate.css\source\rotating_entrances\rotateInDownRight.css" />
+    <Content Include="bower_components\animate.css\source\rotating_entrances\rotateInUpLeft.css" />
+    <Content Include="bower_components\animate.css\source\rotating_entrances\rotateInUpRight.css" />
+    <Content Include="bower_components\animate.css\source\rotating_exits\rotateOut.css" />
+    <Content Include="bower_components\animate.css\source\rotating_exits\rotateOutDownLeft.css" />
+    <Content Include="bower_components\animate.css\source\rotating_exits\rotateOutDownRight.css" />
+    <Content Include="bower_components\animate.css\source\rotating_exits\rotateOutUpLeft.css" />
+    <Content Include="bower_components\animate.css\source\rotating_exits\rotateOutUpRight.css" />
+    <Content Include="bower_components\animate.css\source\sliding_entrances\slideInDown.css" />
+    <Content Include="bower_components\animate.css\source\sliding_entrances\slideInLeft.css" />
+    <Content Include="bower_components\animate.css\source\sliding_entrances\slideInRight.css" />
+    <Content Include="bower_components\animate.css\source\sliding_entrances\slideInUp.css" />
+    <Content Include="bower_components\animate.css\source\sliding_exits\slideOutDown.css" />
+    <Content Include="bower_components\animate.css\source\sliding_exits\slideOutLeft.css" />
+    <Content Include="bower_components\animate.css\source\sliding_exits\slideOutRight.css" />
+    <Content Include="bower_components\animate.css\source\sliding_exits\slideOutUp.css" />
+    <Content Include="bower_components\animate.css\source\specials\hinge.css" />
+    <Content Include="bower_components\animate.css\source\specials\rollIn.css" />
+    <Content Include="bower_components\animate.css\source\specials\rollOut.css" />
+    <Content Include="bower_components\animate.css\source\zooming_entrances\zoomIn.css" />
+    <Content Include="bower_components\animate.css\source\zooming_entrances\zoomInDown.css" />
+    <Content Include="bower_components\animate.css\source\zooming_entrances\zoomInLeft.css" />
+    <Content Include="bower_components\animate.css\source\zooming_entrances\zoomInRight.css" />
+    <Content Include="bower_components\animate.css\source\zooming_entrances\zoomInUp.css" />
+    <Content Include="bower_components\animate.css\source\zooming_exits\zoomOut.css" />
+    <Content Include="bower_components\animate.css\source\zooming_exits\zoomOutDown.css" />
+    <Content Include="bower_components\animate.css\source\zooming_exits\zoomOutLeft.css" />
+    <Content Include="bower_components\animate.css\source\zooming_exits\zoomOutRight.css" />
+    <Content Include="bower_components\animate.css\source\zooming_exits\zoomOutUp.css" />
+    <Content Include="bower_components\animate.css\source\_base.css" />
+    <Content Include="bower_components\bootstrap\.bower.json" />
+    <Content Include="bower_components\bootstrap\bower.json" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="bower_components\bootstrap\js\affix.js" />
+    <Content Include="bower_components\bootstrap\js\alert.js" />
+    <Content Include="bower_components\bootstrap\js\button.js" />
+    <Content Include="bower_components\bootstrap\js\carousel.js" />
+    <Content Include="bower_components\bootstrap\js\collapse.js" />
+    <Content Include="bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="bower_components\bootstrap\js\modal.js" />
+    <Content Include="bower_components\bootstrap\js\popover.js" />
+    <Content Include="bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="bower_components\bootstrap\js\tab.js" />
+    <Content Include="bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="bower_components\bootstrap\js\transition.js" />
+    <Content Include="bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="bower_components\bootstrap\less\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\badges.less" />
+    <Content Include="bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="bower_components\bootstrap\less\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\carousel.less" />
+    <Content Include="bower_components\bootstrap\less\close.less" />
+    <Content Include="bower_components\bootstrap\less\code.less" />
+    <Content Include="bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="bower_components\bootstrap\less\forms.less" />
+    <Content Include="bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="bower_components\bootstrap\less\grid.less" />
+    <Content Include="bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="bower_components\bootstrap\less\labels.less" />
+    <Content Include="bower_components\bootstrap\less\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\media.less" />
+    <Content Include="bower_components\bootstrap\less\mixins.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="bower_components\bootstrap\less\modals.less" />
+    <Content Include="bower_components\bootstrap\less\navbar.less" />
+    <Content Include="bower_components\bootstrap\less\navs.less" />
+    <Content Include="bower_components\bootstrap\less\normalize.less" />
+    <Content Include="bower_components\bootstrap\less\pager.less" />
+    <Content Include="bower_components\bootstrap\less\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\panels.less" />
+    <Content Include="bower_components\bootstrap\less\popovers.less" />
+    <Content Include="bower_components\bootstrap\less\print.less" />
+    <Content Include="bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="bower_components\bootstrap\less\tables.less" />
+    <Content Include="bower_components\bootstrap\less\theme.less" />
+    <Content Include="bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="bower_components\bootstrap\less\type.less" />
+    <Content Include="bower_components\bootstrap\less\utilities.less" />
+    <Content Include="bower_components\bootstrap\less\variables.less" />
+    <Content Include="bower_components\bootstrap\less\wells.less" />
+    <Content Include="bower_components\bootstrap\LICENSE" />
+    <Content Include="bower_components\bootstrap\package.js" />
+    <Content Include="bower_components\bootstrap\package.json" />
+    <Content Include="bower_components\bootstrap\README.md" />
+    <Content Include="bower_components\fastclick\.bower.json" />
+    <Content Include="bower_components\fastclick\bower.json" />
+    <Content Include="bower_components\fastclick\lib\fastclick.js" />
+    <Content Include="bower_components\fastclick\LICENSE" />
+    <Content Include="bower_components\fastclick\README.md" />
+    <Content Include="bower_components\fontawesome\.bower.json" />
+    <Content Include="bower_components\fontawesome\.gitignore" />
+    <Content Include="bower_components\fontawesome\.npmignore" />
+    <Content Include="bower_components\fontawesome\css\font-awesome.css" />
+    <Content Include="bower_components\fontawesome\css\font-awesome.css.map" />
+    <Content Include="bower_components\fontawesome\css\font-awesome.min.css" />
+    <Content Include="bower_components\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="bower_components\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="bower_components\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="bower_components\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="bower_components\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="bower_components\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="bower_components\fontawesome\less\animated.less" />
+    <Content Include="bower_components\fontawesome\less\bordered-pulled.less" />
+    <Content Include="bower_components\fontawesome\less\core.less" />
+    <Content Include="bower_components\fontawesome\less\fixed-width.less" />
+    <Content Include="bower_components\fontawesome\less\font-awesome.less" />
+    <Content Include="bower_components\fontawesome\less\icons.less" />
+    <Content Include="bower_components\fontawesome\less\larger.less" />
+    <Content Include="bower_components\fontawesome\less\list.less" />
+    <Content Include="bower_components\fontawesome\less\mixins.less" />
+    <Content Include="bower_components\fontawesome\less\path.less" />
+    <Content Include="bower_components\fontawesome\less\rotated-flipped.less" />
+    <Content Include="bower_components\fontawesome\less\stacked.less" />
+    <Content Include="bower_components\fontawesome\less\variables.less" />
+    <Content Include="bower_components\fontawesome\scss\font-awesome.scss" />
+    <Content Include="bower_components\fontawesome\scss\_animated.scss" />
+    <Content Include="bower_components\fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="bower_components\fontawesome\scss\_core.scss" />
+    <Content Include="bower_components\fontawesome\scss\_fixed-width.scss" />
+    <Content Include="bower_components\fontawesome\scss\_icons.scss" />
+    <Content Include="bower_components\fontawesome\scss\_larger.scss" />
+    <Content Include="bower_components\fontawesome\scss\_list.scss" />
+    <Content Include="bower_components\fontawesome\scss\_mixins.scss" />
+    <Content Include="bower_components\fontawesome\scss\_path.scss" />
+    <Content Include="bower_components\fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="bower_components\fontawesome\scss\_stacked.scss" />
+    <Content Include="bower_components\fontawesome\scss\_variables.scss" />
+    <Content Include="bower_components\jquery\.bower.json" />
+    <Content Include="bower_components\jquery\bower.json" />
+    <Content Include="bower_components\jquery\dist\jquery.js" />
+    <Content Include="bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="bower_components\jquery\MIT-LICENSE.txt" />
+    <Content Include="bower_components\jquery\src\ajax.js" />
+    <Content Include="bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="bower_components\jquery\src\ajax\load.js" />
+    <Content Include="bower_components\jquery\src\ajax\parseJSON.js" />
+    <Content Include="bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="bower_components\jquery\src\ajax\script.js" />
+    <Content Include="bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="bower_components\jquery\src\attributes.js" />
+    <Content Include="bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="bower_components\jquery\src\attributes\support.js" />
+    <Content Include="bower_components\jquery\src\attributes\val.js" />
+    <Content Include="bower_components\jquery\src\callbacks.js" />
+    <Content Include="bower_components\jquery\src\core.js" />
+    <Content Include="bower_components\jquery\src\core\access.js" />
+    <Content Include="bower_components\jquery\src\core\init.js" />
+    <Content Include="bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="bower_components\jquery\src\core\ready.js" />
+    <Content Include="bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="bower_components\jquery\src\css.js" />
+    <Content Include="bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="bower_components\jquery\src\css\defaultDisplay.js" />
+    <Content Include="bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="bower_components\jquery\src\css\support.js" />
+    <Content Include="bower_components\jquery\src\css\swap.js" />
+    <Content Include="bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="bower_components\jquery\src\css\var\getStyles.js" />
+    <Content Include="bower_components\jquery\src\css\var\isHidden.js" />
+    <Content Include="bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="bower_components\jquery\src\data.js" />
+    <Content Include="bower_components\jquery\src\data\accepts.js" />
+    <Content Include="bower_components\jquery\src\data\Data.js" />
+    <Content Include="bower_components\jquery\src\data\var\data_priv.js" />
+    <Content Include="bower_components\jquery\src\data\var\data_user.js" />
+    <Content Include="bower_components\jquery\src\deferred.js" />
+    <Content Include="bower_components\jquery\src\deprecated.js" />
+    <Content Include="bower_components\jquery\src\dimensions.js" />
+    <Content Include="bower_components\jquery\src\effects.js" />
+    <Content Include="bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="bower_components\jquery\src\event.js" />
+    <Content Include="bower_components\jquery\src\event\ajax.js" />
+    <Content Include="bower_components\jquery\src\event\alias.js" />
+    <Content Include="bower_components\jquery\src\event\support.js" />
+    <Content Include="bower_components\jquery\src\exports\amd.js" />
+    <Content Include="bower_components\jquery\src\exports\global.js" />
+    <Content Include="bower_components\jquery\src\intro.js" />
+    <Content Include="bower_components\jquery\src\jquery.js" />
+    <Content Include="bower_components\jquery\src\manipulation.js" />
+    <Content Include="bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="bower_components\jquery\src\offset.js" />
+    <Content Include="bower_components\jquery\src\outro.js" />
+    <Content Include="bower_components\jquery\src\queue.js" />
+    <Content Include="bower_components\jquery\src\queue\delay.js" />
+    <Content Include="bower_components\jquery\src\selector-native.js" />
+    <Content Include="bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="bower_components\jquery\src\selector.js" />
+    <Content Include="bower_components\jquery\src\serialize.js" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="bower_components\jquery\src\traversing.js" />
+    <Content Include="bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="bower_components\jquery\src\var\arr.js" />
+    <Content Include="bower_components\jquery\src\var\class2type.js" />
+    <Content Include="bower_components\jquery\src\var\concat.js" />
+    <Content Include="bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="bower_components\jquery\src\var\pnum.js" />
+    <Content Include="bower_components\jquery\src\var\push.js" />
+    <Content Include="bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="bower_components\jquery\src\var\slice.js" />
+    <Content Include="bower_components\jquery\src\var\strundefined.js" />
+    <Content Include="bower_components\jquery\src\var\support.js" />
+    <Content Include="bower_components\jquery\src\var\toString.js" />
+    <Content Include="bower_components\jquery\src\wrap.js" />
+    <Content Include="bower_components\moment.twitter\.bower.json" />
+    <Content Include="bower_components\moment.twitter\bower.json" />
+    <Content Include="bower_components\moment.twitter\component.json" />
+    <Content Include="bower_components\moment.twitter\Gruntfile.coffee" />
+    <Content Include="bower_components\moment.twitter\moment-twitter.js" />
+    <Content Include="bower_components\moment.twitter\package.json" />
+    <Content Include="bower_components\moment.twitter\README.md" />
+    <Content Include="bower_components\moment.twitter\src\moment.twitter.coffee" />
+    <Content Include="bower_components\moment.twitter\test.js" />
+    <Content Include="bower_components\moment\.bower.json" />
+    <Content Include="bower_components\moment\bower.json" />
+    <Content Include="bower_components\moment\CHANGELOG.md" />
+    <Content Include="bower_components\moment\LICENSE" />
+    <Content Include="bower_components\moment\locale\af.js" />
+    <Content Include="bower_components\moment\locale\ar-ma.js" />
+    <Content Include="bower_components\moment\locale\ar-sa.js" />
+    <Content Include="bower_components\moment\locale\ar-tn.js" />
+    <Content Include="bower_components\moment\locale\ar.js" />
+    <Content Include="bower_components\moment\locale\az.js" />
+    <Content Include="bower_components\moment\locale\be.js" />
+    <Content Include="bower_components\moment\locale\bg.js" />
+    <Content Include="bower_components\moment\locale\bn.js" />
+    <Content Include="bower_components\moment\locale\bo.js" />
+    <Content Include="bower_components\moment\locale\br.js" />
+    <Content Include="bower_components\moment\locale\bs.js" />
+    <Content Include="bower_components\moment\locale\ca.js" />
+    <Content Include="bower_components\moment\locale\cs.js" />
+    <Content Include="bower_components\moment\locale\cv.js" />
+    <Content Include="bower_components\moment\locale\cy.js" />
+    <Content Include="bower_components\moment\locale\da.js" />
+    <Content Include="bower_components\moment\locale\de-at.js" />
+    <Content Include="bower_components\moment\locale\de.js" />
+    <Content Include="bower_components\moment\locale\el.js" />
+    <Content Include="bower_components\moment\locale\en-au.js" />
+    <Content Include="bower_components\moment\locale\en-ca.js" />
+    <Content Include="bower_components\moment\locale\en-gb.js" />
+    <Content Include="bower_components\moment\locale\eo.js" />
+    <Content Include="bower_components\moment\locale\es.js" />
+    <Content Include="bower_components\moment\locale\et.js" />
+    <Content Include="bower_components\moment\locale\eu.js" />
+    <Content Include="bower_components\moment\locale\fa.js" />
+    <Content Include="bower_components\moment\locale\fi.js" />
+    <Content Include="bower_components\moment\locale\fo.js" />
+    <Content Include="bower_components\moment\locale\fr-ca.js" />
+    <Content Include="bower_components\moment\locale\fr.js" />
+    <Content Include="bower_components\moment\locale\fy.js" />
+    <Content Include="bower_components\moment\locale\gl.js" />
+    <Content Include="bower_components\moment\locale\he.js" />
+    <Content Include="bower_components\moment\locale\hi.js" />
+    <Content Include="bower_components\moment\locale\hr.js" />
+    <Content Include="bower_components\moment\locale\hu.js" />
+    <Content Include="bower_components\moment\locale\hy-am.js" />
+    <Content Include="bower_components\moment\locale\id.js" />
+    <Content Include="bower_components\moment\locale\is.js" />
+    <Content Include="bower_components\moment\locale\it.js" />
+    <Content Include="bower_components\moment\locale\ja.js" />
+    <Content Include="bower_components\moment\locale\jv.js" />
+    <Content Include="bower_components\moment\locale\ka.js" />
+    <Content Include="bower_components\moment\locale\km.js" />
+    <Content Include="bower_components\moment\locale\ko.js" />
+    <Content Include="bower_components\moment\locale\lb.js" />
+    <Content Include="bower_components\moment\locale\lt.js" />
+    <Content Include="bower_components\moment\locale\lv.js" />
+    <Content Include="bower_components\moment\locale\me.js" />
+    <Content Include="bower_components\moment\locale\mk.js" />
+    <Content Include="bower_components\moment\locale\ml.js" />
+    <Content Include="bower_components\moment\locale\mr.js" />
+    <Content Include="bower_components\moment\locale\ms-my.js" />
+    <Content Include="bower_components\moment\locale\my.js" />
+    <Content Include="bower_components\moment\locale\nb.js" />
+    <Content Include="bower_components\moment\locale\ne.js" />
+    <Content Include="bower_components\moment\locale\nl.js" />
+    <Content Include="bower_components\moment\locale\nn.js" />
+    <Content Include="bower_components\moment\locale\pl.js" />
+    <Content Include="bower_components\moment\locale\pt-br.js" />
+    <Content Include="bower_components\moment\locale\pt.js" />
+    <Content Include="bower_components\moment\locale\ro.js" />
+    <Content Include="bower_components\moment\locale\ru.js" />
+    <Content Include="bower_components\moment\locale\si.js" />
+    <Content Include="bower_components\moment\locale\sk.js" />
+    <Content Include="bower_components\moment\locale\sl.js" />
+    <Content Include="bower_components\moment\locale\sq.js" />
+    <Content Include="bower_components\moment\locale\sr-cyrl.js" />
+    <Content Include="bower_components\moment\locale\sr.js" />
+    <Content Include="bower_components\moment\locale\sv.js" />
+    <Content Include="bower_components\moment\locale\ta.js" />
+    <Content Include="bower_components\moment\locale\th.js" />
+    <Content Include="bower_components\moment\locale\tl-ph.js" />
+    <Content Include="bower_components\moment\locale\tr.js" />
+    <Content Include="bower_components\moment\locale\tzm-latn.js" />
+    <Content Include="bower_components\moment\locale\tzm.js" />
+    <Content Include="bower_components\moment\locale\uk.js" />
+    <Content Include="bower_components\moment\locale\uz.js" />
+    <Content Include="bower_components\moment\locale\vi.js" />
+    <Content Include="bower_components\moment\locale\zh-cn.js" />
+    <Content Include="bower_components\moment\locale\zh-tw.js" />
+    <Content Include="bower_components\moment\min\locales.js" />
+    <Content Include="bower_components\moment\min\locales.min.js" />
+    <Content Include="bower_components\moment\min\moment-with-locales.js" />
+    <Content Include="bower_components\moment\min\moment-with-locales.min.js" />
+    <Content Include="bower_components\moment\min\moment.min.js" />
+    <Content Include="bower_components\moment\min\tests.js" />
+    <Content Include="bower_components\moment\moment.js" />
+    <Content Include="bower_components\moment\README.md" />
+    <Content Include="bower_components\moment\src\lib\create\check-overflow.js" />
+    <Content Include="bower_components\moment\src\lib\create\date-from-array.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-anything.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-array.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-object.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="bower_components\moment\src\lib\create\from-string.js" />
+    <Content Include="bower_components\moment\src\lib\create\local.js" />
+    <Content Include="bower_components\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="bower_components\moment\src\lib\create\utc.js" />
+    <Content Include="bower_components\moment\src\lib\create\valid.js" />
+    <Content Include="bower_components\moment\src\lib\duration\abs.js" />
+    <Content Include="bower_components\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="bower_components\moment\src\lib\duration\as.js" />
+    <Content Include="bower_components\moment\src\lib\duration\bubble.js" />
+    <Content Include="bower_components\moment\src\lib\duration\constructor.js" />
+    <Content Include="bower_components\moment\src\lib\duration\create.js" />
+    <Content Include="bower_components\moment\src\lib\duration\duration.js" />
+    <Content Include="bower_components\moment\src\lib\duration\get.js" />
+    <Content Include="bower_components\moment\src\lib\duration\humanize.js" />
+    <Content Include="bower_components\moment\src\lib\duration\iso-string.js" />
+    <Content Include="bower_components\moment\src\lib\duration\prototype.js" />
+    <Content Include="bower_components\moment\src\lib\format\format.js" />
+    <Content Include="bower_components\moment\src\lib\locale\calendar.js" />
+    <Content Include="bower_components\moment\src\lib\locale\constructor.js" />
+    <Content Include="bower_components\moment\src\lib\locale\en.js" />
+    <Content Include="bower_components\moment\src\lib\locale\formats.js" />
+    <Content Include="bower_components\moment\src\lib\locale\invalid.js" />
+    <Content Include="bower_components\moment\src\lib\locale\lists.js" />
+    <Content Include="bower_components\moment\src\lib\locale\locale.js" />
+    <Content Include="bower_components\moment\src\lib\locale\locales.js" />
+    <Content Include="bower_components\moment\src\lib\locale\ordinal.js" />
+    <Content Include="bower_components\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="bower_components\moment\src\lib\locale\prototype.js" />
+    <Content Include="bower_components\moment\src\lib\locale\relative.js" />
+    <Content Include="bower_components\moment\src\lib\locale\set.js" />
+    <Content Include="bower_components\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="bower_components\moment\src\lib\moment\calendar.js" />
+    <Content Include="bower_components\moment\src\lib\moment\clone.js" />
+    <Content Include="bower_components\moment\src\lib\moment\compare.js" />
+    <Content Include="bower_components\moment\src\lib\moment\constructor.js" />
+    <Content Include="bower_components\moment\src\lib\moment\diff.js" />
+    <Content Include="bower_components\moment\src\lib\moment\format.js" />
+    <Content Include="bower_components\moment\src\lib\moment\from.js" />
+    <Content Include="bower_components\moment\src\lib\moment\get-set.js" />
+    <Content Include="bower_components\moment\src\lib\moment\locale.js" />
+    <Content Include="bower_components\moment\src\lib\moment\min-max.js" />
+    <Content Include="bower_components\moment\src\lib\moment\moment.js" />
+    <Content Include="bower_components\moment\src\lib\moment\prototype.js" />
+    <Content Include="bower_components\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="bower_components\moment\src\lib\moment\to-type.js" />
+    <Content Include="bower_components\moment\src\lib\moment\to.js" />
+    <Content Include="bower_components\moment\src\lib\moment\valid.js" />
+    <Content Include="bower_components\moment\src\lib\parse\regex.js" />
+    <Content Include="bower_components\moment\src\lib\parse\token.js" />
+    <Content Include="bower_components\moment\src\lib\units\aliases.js" />
+    <Content Include="bower_components\moment\src\lib\units\constants.js" />
+    <Content Include="bower_components\moment\src\lib\units\day-of-month.js" />
+    <Content Include="bower_components\moment\src\lib\units\day-of-week.js" />
+    <Content Include="bower_components\moment\src\lib\units\day-of-year.js" />
+    <Content Include="bower_components\moment\src\lib\units\hour.js" />
+    <Content Include="bower_components\moment\src\lib\units\millisecond.js" />
+    <Content Include="bower_components\moment\src\lib\units\minute.js" />
+    <Content Include="bower_components\moment\src\lib\units\month.js" />
+    <Content Include="bower_components\moment\src\lib\units\offset.js" />
+    <Content Include="bower_components\moment\src\lib\units\quarter.js" />
+    <Content Include="bower_components\moment\src\lib\units\second.js" />
+    <Content Include="bower_components\moment\src\lib\units\timestamp.js" />
+    <Content Include="bower_components\moment\src\lib\units\timezone.js" />
+    <Content Include="bower_components\moment\src\lib\units\units.js" />
+    <Content Include="bower_components\moment\src\lib\units\week-year.js" />
+    <Content Include="bower_components\moment\src\lib\units\week.js" />
+    <Content Include="bower_components\moment\src\lib\units\year.js" />
+    <Content Include="bower_components\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="bower_components\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="bower_components\moment\src\lib\utils\defaults.js" />
+    <Content Include="bower_components\moment\src\lib\utils\deprecate.js" />
+    <Content Include="bower_components\moment\src\lib\utils\extend.js" />
+    <Content Include="bower_components\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="bower_components\moment\src\lib\utils\hooks.js" />
+    <Content Include="bower_components\moment\src\lib\utils\is-array.js" />
+    <Content Include="bower_components\moment\src\lib\utils\is-date.js" />
+    <Content Include="bower_components\moment\src\lib\utils\map.js" />
+    <Content Include="bower_components\moment\src\lib\utils\to-int.js" />
+    <Content Include="bower_components\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="bower_components\moment\src\locale\af.js" />
+    <Content Include="bower_components\moment\src\locale\ar-ma.js" />
+    <Content Include="bower_components\moment\src\locale\ar-sa.js" />
+    <Content Include="bower_components\moment\src\locale\ar-tn.js" />
+    <Content Include="bower_components\moment\src\locale\ar.js" />
+    <Content Include="bower_components\moment\src\locale\az.js" />
+    <Content Include="bower_components\moment\src\locale\be.js" />
+    <Content Include="bower_components\moment\src\locale\bg.js" />
+    <Content Include="bower_components\moment\src\locale\bn.js" />
+    <Content Include="bower_components\moment\src\locale\bo.js" />
+    <Content Include="bower_components\moment\src\locale\br.js" />
+    <Content Include="bower_components\moment\src\locale\bs.js" />
+    <Content Include="bower_components\moment\src\locale\ca.js" />
+    <Content Include="bower_components\moment\src\locale\cs.js" />
+    <Content Include="bower_components\moment\src\locale\cv.js" />
+    <Content Include="bower_components\moment\src\locale\cy.js" />
+    <Content Include="bower_components\moment\src\locale\da.js" />
+    <Content Include="bower_components\moment\src\locale\de-at.js" />
+    <Content Include="bower_components\moment\src\locale\de.js" />
+    <Content Include="bower_components\moment\src\locale\el.js" />
+    <Content Include="bower_components\moment\src\locale\en-au.js" />
+    <Content Include="bower_components\moment\src\locale\en-ca.js" />
+    <Content Include="bower_components\moment\src\locale\en-gb.js" />
+    <Content Include="bower_components\moment\src\locale\eo.js" />
+    <Content Include="bower_components\moment\src\locale\es.js" />
+    <Content Include="bower_components\moment\src\locale\et.js" />
+    <Content Include="bower_components\moment\src\locale\eu.js" />
+    <Content Include="bower_components\moment\src\locale\fa.js" />
+    <Content Include="bower_components\moment\src\locale\fi.js" />
+    <Content Include="bower_components\moment\src\locale\fo.js" />
+    <Content Include="bower_components\moment\src\locale\fr-ca.js" />
+    <Content Include="bower_components\moment\src\locale\fr.js" />
+    <Content Include="bower_components\moment\src\locale\fy.js" />
+    <Content Include="bower_components\moment\src\locale\gl.js" />
+    <Content Include="bower_components\moment\src\locale\he.js" />
+    <Content Include="bower_components\moment\src\locale\hi.js" />
+    <Content Include="bower_components\moment\src\locale\hr.js" />
+    <Content Include="bower_components\moment\src\locale\hu.js" />
+    <Content Include="bower_components\moment\src\locale\hy-am.js" />
+    <Content Include="bower_components\moment\src\locale\id.js" />
+    <Content Include="bower_components\moment\src\locale\is.js" />
+    <Content Include="bower_components\moment\src\locale\it.js" />
+    <Content Include="bower_components\moment\src\locale\ja.js" />
+    <Content Include="bower_components\moment\src\locale\jv.js" />
+    <Content Include="bower_components\moment\src\locale\ka.js" />
+    <Content Include="bower_components\moment\src\locale\km.js" />
+    <Content Include="bower_components\moment\src\locale\ko.js" />
+    <Content Include="bower_components\moment\src\locale\lb.js" />
+    <Content Include="bower_components\moment\src\locale\lt.js" />
+    <Content Include="bower_components\moment\src\locale\lv.js" />
+    <Content Include="bower_components\moment\src\locale\me.js" />
+    <Content Include="bower_components\moment\src\locale\mk.js" />
+    <Content Include="bower_components\moment\src\locale\ml.js" />
+    <Content Include="bower_components\moment\src\locale\mr.js" />
+    <Content Include="bower_components\moment\src\locale\ms-my.js" />
+    <Content Include="bower_components\moment\src\locale\my.js" />
+    <Content Include="bower_components\moment\src\locale\nb.js" />
+    <Content Include="bower_components\moment\src\locale\ne.js" />
+    <Content Include="bower_components\moment\src\locale\nl.js" />
+    <Content Include="bower_components\moment\src\locale\nn.js" />
+    <Content Include="bower_components\moment\src\locale\pl.js" />
+    <Content Include="bower_components\moment\src\locale\pt-br.js" />
+    <Content Include="bower_components\moment\src\locale\pt.js" />
+    <Content Include="bower_components\moment\src\locale\ro.js" />
+    <Content Include="bower_components\moment\src\locale\ru.js" />
+    <Content Include="bower_components\moment\src\locale\si.js" />
+    <Content Include="bower_components\moment\src\locale\sk.js" />
+    <Content Include="bower_components\moment\src\locale\sl.js" />
+    <Content Include="bower_components\moment\src\locale\sq.js" />
+    <Content Include="bower_components\moment\src\locale\sr-cyrl.js" />
+    <Content Include="bower_components\moment\src\locale\sr.js" />
+    <Content Include="bower_components\moment\src\locale\sv.js" />
+    <Content Include="bower_components\moment\src\locale\ta.js" />
+    <Content Include="bower_components\moment\src\locale\th.js" />
+    <Content Include="bower_components\moment\src\locale\tl-ph.js" />
+    <Content Include="bower_components\moment\src\locale\tr.js" />
+    <Content Include="bower_components\moment\src\locale\tzm-latn.js" />
+    <Content Include="bower_components\moment\src\locale\tzm.js" />
+    <Content Include="bower_components\moment\src\locale\uk.js" />
+    <Content Include="bower_components\moment\src\locale\uz.js" />
+    <Content Include="bower_components\moment\src\locale\vi.js" />
+    <Content Include="bower_components\moment\src\locale\zh-cn.js" />
+    <Content Include="bower_components\moment\src\locale\zh-tw.js" />
+    <Content Include="bower_components\moment\src\moment.js" />
+    <Content Include="bower_components\moment\templates\amd-named.js" />
+    <Content Include="bower_components\moment\templates\amd.js" />
+    <Content Include="bower_components\moment\templates\globals.js" />
+    <Content Include="bower_components\moment\templates\locale-header.js" />
+    <Content Include="bower_components\moment\templates\test-header.js" />
+    <Content Include="bower_components\parsleyjs-bootstrap3\.bower.json" />
+    <Content Include="bower_components\parsleyjs-bootstrap3\bower.json" />
+    <Content Include="bower_components\parsleyjs-bootstrap3\parsleyConfig.js" />
+    <Content Include="bower_components\parsleyjs-bootstrap3\README.md" />
+    <Content Include="bower_components\parsleyjs\.bower.json" />
+    <Content Include="bower_components\parsleyjs\bower.json" />
+    <Content Include="bower_components\parsleyjs\dist\parsley.js" />
+    <Content Include="bower_components\parsleyjs\dist\parsley.min.js" />
+    <Content Include="bower_components\parsleyjs\dist\parsley.remote.js" />
+    <Content Include="bower_components\parsleyjs\dist\parsley.remote.min.js" />
+    <Content Include="bower_components\parsleyjs\LICENSE" />
+    <Content Include="bower_components\parsleyjs\src\config.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\plugin\bind.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\plugin\remote.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\validator\comparison.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\validator\dateiso.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\validator\luhn.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\validator\notequalto.js" />
+    <Content Include="bower_components\parsleyjs\src\extra\validator\words.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ar.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\bg.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ca.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\cs.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\cs.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\da.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\de.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\de.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\en.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\en.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\es.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\fa.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\fi.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\fi.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\fr.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\fr.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\he.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\he.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\id.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\id.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\it.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\it.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ja.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ko.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ms_MY.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ms_MY.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\nl.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\nl.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\no.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\pl.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\pt-br.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ro.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ro.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ru.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\ru.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\sq.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\sv.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\sv.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\th.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\tr.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\uk.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\uk.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\zh_cn.extra.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\zh_cn.js" />
+    <Content Include="bower_components\parsleyjs\src\i18n\zh_tw.js" />
+    <Content Include="bower_components\parsleyjs\src\main.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley.css" />
+    <Content Include="bower_components\parsleyjs\src\parsley.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\abstract.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\defaults.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\factory.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\factory\constraint.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\field.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\form.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\multiple.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\pubsub.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\ui.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\utils.js" />
+    <Content Include="bower_components\parsleyjs\src\parsley\validator.js" />
+    <Content Include="bower_components\parsleyjs\src\wrap\append.js" />
+    <Content Include="bower_components\parsleyjs\src\wrap\prepend.js" />
+    <Content Include="bower_components\requirejs-regular\.bower.json" />
+    <Content Include="bower_components\requirejs-regular\bower.json" />
+    <Content Include="bower_components\requirejs-regular\component.json" />
+    <Content Include="bower_components\requirejs-regular\demo\build.js" />
+    <Content Include="bower_components\requirejs-regular\demo\index.html" />
+    <Content Include="bower_components\requirejs-regular\demo\index_build.html" />
+    <Content Include="bower_components\requirejs-regular\demo\scripts\foo.html" />
+    <Content Include="bower_components\requirejs-regular\demo\scripts\main.js" />
+    <Content Include="bower_components\requirejs-regular\demo\scripts\main_built.js" />
+    <Content Include="bower_components\requirejs-regular\demo\scripts\require.js" />
+    <Content Include="bower_components\requirejs-regular\gulpfile.js" />
+    <Content Include="bower_components\requirejs-regular\README.md" />
+    <Content Include="bower_components\requirejs-regular\rgl.js" />
+    <Content Include="bower_components\requirejs-regular\src\index.js" />
+    <None Include="compilerconfig.json" />
+    <Content Include="cordova.android.js" />
+    <Content Include="cordova.ios.js" />
+    <Content Include="cordova.wp8.js" />
+    <Content Include="css\fonts\leaguegothic-condensed-italic-webfont.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-italic-webfont.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-italic-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-italic-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-regular-webfont.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-regular-webfont.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-regular-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-condensed-regular-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-italic-webfont.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-italic-webfont.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-italic-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-italic-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-regular-webfont.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-regular-webfont.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-regular-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\leaguegothic-regular-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\PassionOne-Black.ttf" />
+    <Content Include="css\fonts\PassionOne-Bold.ttf" />
+    <Content Include="css\fonts\PassionOne-Regular.ttf" />
+    <Content Include="css\fonts\passionOneBold.woff2" />
+    <Content Include="css\fonts\passionOneBoldExt.woff2" />
+    <Content Include="css\fonts\guudtimes.eot" />
+    <Content Include="css\fonts\guudtimes.svg" />
+    <Content Include="css\fonts\guudtimes.ttf" />
+    <Content Include="css\fonts\guudtimes.woff" />
+    <Content Include="css\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\index.css.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\index.less" />
+    <Content Include="css\index.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\kendo-fixes.less" />
+    <Content Include="css\mixins.less" />
+    <Content Include="css\phone.css" />
+    <Content Include="css\social.css">
+      <SubType>Content</SubType>
+      <DependentUpon>css\social.less</DependentUpon>
+    </Content>
+    <Content Include="css\social.less" />
+    <Content Include="css\social.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\styles.css" />
+    <Content Include="img\192.png" />
+    <Content Include="img\3px-tile.png" />
+    <Content Include="img\ad.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\ad2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\AppShort2.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\backbg.png" />
+    <Content Include="img\ding.mp3" />
+    <Content Include="img\flags%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\flags.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\grey-logo.png" />
+    <Content Include="img\headbg.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\lime.png" />
+    <Content Include="img\loginLogo.png" />
+    <Content Include="img\notification.mp3" />
+    <Content Include="img\overlay-iPhone-landscape.png" />
+    <Content Include="img\overlay-iPhone-portrait.png" />
+    <Content Include="img\overlay.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\topLogo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\ulogo.png" />
+    <Content Include="img\white-logo.png" />
+    <Content Include="img\whiteLogo.png" />
+    <Content Include="img\wink.gif" />
+    <Content Include="index.html" />
+    <Content Include="kendo\js\kendo.mobile.min.js" />
+    <Content Include="kendo\styles\kendo.mobile.all.min.css" />
+    <Content Include="kendo\typescript\kendo.mobile.d.ts" />
+    <Content Include="Plugins\AppVersion-master\CHANGELOG.md" />
+    <Content Include="Plugins\AppVersion-master\LICENSE" />
+    <Content Include="Plugins\AppVersion-master\plugin.xml" />
+    <Content Include="Plugins\AppVersion-master\README.md" />
+    <Content Include="Plugins\AppVersion-master\src\android\AppVersion.java" />
+    <Content Include="Plugins\AppVersion-master\src\ios\AppVersion.h" />
+    <Content Include="Plugins\AppVersion-master\src\ios\AppVersion.m" />
+    <Content Include="Plugins\AppVersion-master\src\windows8\AppVersionProxy.js" />
+    <Content Include="Plugins\AppVersion-master\src\wp8\AppVersion.cs" />
+    <Content Include="Plugins\AppVersion-master\VERSION" />
+    <Content Include="Plugins\AppVersion-master\www\AppVersionPlugin.js" />
+    <Content Include="Plugins\AppVersion-master\www\blackberry10\AppVersionProxy.js" />
+    <Content Include="Plugins\cordova-plugin-facebook4-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\android\ConnectPlugin.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\android\facebookconnect.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FacebookConnectPlugin.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FacebookConnectPlugin.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\FBSDKCoreKit">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKAccessToken.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKAppEvents.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKApplicationDelegate.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKAppLinkResolver.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKAppLinkUtility.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKConstants.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKCopying.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKCoreKit.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKGraphErrorRecoveryProcessor.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKGraphRequest.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKGraphRequestConnection.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKGraphRequestDataAttachment.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKMacros.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKMutableCopying.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKProfile.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKProfilePictureView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKSettings.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKTestUsersManager.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\FBSDKUtility.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Info.plist">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Modules\module.modulemap">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKAccessTokenCacheV4.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKBridgeAPICrypto.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKBridgeAPIProtocol.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKBridgeAPIProtocolNativeV1.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKBridgeAPIProtocolWebV1.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKError.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKGraphRequestBody.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKGraphRequestMetadata.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKURLConnection.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\FBSDKWebDialogView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\FBSDKLoginKit">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginConstants.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginKit.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginManager.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginManagerLoginResult.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKLoginTooltipView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\FBSDKTooltipView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Info.plist">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Modules\module.modulemap">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\FBSDKShareKit">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKAppGroupAddDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKAppGroupContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKAppGroupJoinDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKAppInviteContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKAppInviteDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKGameRequestContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKGameRequestDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKLikeButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKLikeControl.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKLikeObjectType.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKLiking.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKMessageDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSendButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareAPI.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareConstants.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareDialog.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareDialogMode.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareKit.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareLinkContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareOpenGraphAction.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareOpenGraphContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareOpenGraphObject.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareOpenGraphValueContainer.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSharePhoto.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSharePhotoContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareVideo.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKShareVideoContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSharing.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSharingButton.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\FBSDKSharingContent.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Info.plist">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Modules\module.modulemap">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\tests\tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-facebook4-master\www\facebookConnectPlugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\.cordova">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\css\app.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\css\prettify.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\images\hokkaido.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\images\welcome_img.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\async.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\example.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\jquery.fittext.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\jquery.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\jquery.tmpl.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\prettify.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\kml\marker.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\kml\polygon.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\kml\polyline.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\kml\shizuoka.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\finish.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step1.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step10.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step11.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step12.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step2.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step3.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step4.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step5.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step6.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step7.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step8.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\step9.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\welcome.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\ajax-loader.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\action-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\action-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\alert-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\alert-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-l-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-l-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-r-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-r-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-d-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-l-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-l-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-r-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-r-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-l-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-l-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-r-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-r-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\arrow-u-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\audio-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\audio-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\back-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\back-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\bars-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\bars-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\bullets-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\bullets-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\calendar-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\calendar-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\camera-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\camera-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-d-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-d-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-l-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-l-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-r-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-r-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-u-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\carat-u-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\check-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\check-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\clock-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\clock-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\cloud-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\cloud-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\comment-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\comment-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\delete-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\delete-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\edit-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\edit-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\eye-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\eye-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\forbidden-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\forbidden-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\forward-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\forward-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\gear-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\gear-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\grid-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\grid-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\heart-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\heart-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\home-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\home-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\info-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\info-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\location-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\location-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\lock-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\lock-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\mail-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\mail-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\minus-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\minus-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\navigation-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\navigation-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\phone-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\phone-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\plus-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\plus-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\power-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\power-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\recycle-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\recycle-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\refresh-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\refresh-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\search-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\search-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\shop-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\shop-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\star-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\star-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\tag-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\tag-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\user-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\user-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\video-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\video-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\action-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\action-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\alert-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\alert-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-l-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-l-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-r-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-r-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-d-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-l-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-l-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-r-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-r-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-l-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-l-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-r-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-r-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\arrow-u-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\audio-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\audio-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\back-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\back-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\bars-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\bars-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\bullets-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\bullets-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\calendar-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\calendar-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\camera-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\camera-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-d-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-d-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-l-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-l-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-r-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-r-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-u-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\carat-u-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\check-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\check-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\clock-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\clock-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\cloud-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\cloud-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\comment-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\comment-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\delete-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\delete-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\edit-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\edit-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\eye-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\eye-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\forbidden-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\forbidden-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\forward-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\forward-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\gear-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\gear-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\grid-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\grid-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\heart-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\heart-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\home-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\home-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\info-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\info-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\location-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\location-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\lock-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\lock-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\mail-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\mail-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\minus-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\minus-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\navigation-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\navigation-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\phone-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\phone-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\plus-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\plus-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\power-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\power-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\recycle-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\recycle-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\refresh-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\refresh-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\search-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\search-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\shop-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\shop-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\star-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\star-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\tag-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\tag-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\user-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\user-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\video-black.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\video-white.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\jquery.mobile-1.4.4.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\prettify.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\style.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\images\google_logo.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\images\google_tokyo_icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\images\icon-yellow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\images\myinfo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\async.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\example.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\jquery.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\jquery.mobile-1.4.4.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\jquery.mobile.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\prettify.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\kml\marker.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\kml\polygon.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\kml\polyline.kml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\customInfoWindow.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\direction.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\drawOverlays.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\geocoding.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\getVisibleRegion.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\gotoGoogle.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\groundOverlay.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\htmlOverlay.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\info_style.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\kmlOverlay.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\mapOptions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\mapRemove.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\marker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\marker1.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\marker2.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\marker3.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\marker_advance.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\panBy.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\reverse_geocoding.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\tileOverlay.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\welcome.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\whereAreYou.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\AsyncKmlParser.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\AsyncLicenseInfo.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\AsyncLoadImage.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\AsyncLoadImageInterface.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\External.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\GoogleMaps.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\MyGeocoder.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\MyPlugin.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\MyPluginInterface.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\MyPluginLayout.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginAsyncInterface.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginCircle.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginGroundOverlay.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginKmlOverlay.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginMap.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginMarker.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginPolygon.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginPolyline.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginTileOverlay.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginTileProvider.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\PluginUtil.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Circle.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Circle.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\External.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\External.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Geocoder.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Geocoder.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GoogleMaps.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GoogleMaps.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GoogleMapsViewController.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GoogleMapsViewController.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GroundOverlay.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\GroundOverlay.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\KmlOverlay.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\KmlOverlay.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Map.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Map.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Marker.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Marker.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPlgunProtocol.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginLayer.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginLayer.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginLayerDebugView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginLayerDebugView.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginScrollView.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyPluginScrollView.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyReachability.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\MyReachability.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\NSData-Base64\NSData+Base64.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\NSData-Base64\NSData+Base64.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\NSData-Base64\NSData+Base64.podspec">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\PluginUtil.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\PluginUtil.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Polygon.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Polygon.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Polyline.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\Polyline.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\TBXML.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\TBXML.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\TileOverlay.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\TileOverlay.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-googlemaps-1.3.4\www\googlemaps-cdv-plugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\de\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\de\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\es\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\es\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\fr\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\fr\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\it\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\it\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\ja\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\ja\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\ko\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\ko\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\pl\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\pl\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\ru\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\zh\index.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\doc\zh\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\NOTICE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\RELEASENOTES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\amazon\InAppBrowser.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\amazon\InAppChromeClient.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\InAppBrowser.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\InAppBrowserDialog.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\InAppChromeClient.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-hdpi\ic_action_next_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-hdpi\ic_action_previous_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-hdpi\ic_action_remove.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-mdpi\ic_action_next_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-mdpi\ic_action_previous_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-mdpi\ic_action_remove.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xhdpi\ic_action_next_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xhdpi\ic_action_previous_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xhdpi\ic_action_remove.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xxhdpi\ic_action_next_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xxhdpi\ic_action_previous_item.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xxhdpi\ic_action_remove.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\de\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\es\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\fr\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\it\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\ja\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\ko\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\pl\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\zh\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\browser\InAppBrowserProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\firefoxos\InAppBrowserProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ios\CDVInAppBrowser.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ios\CDVInAppBrowser.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\close.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\inappbrowser.cpp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\inappbrowser.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\InAppBrowser.qml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\InAppBrowser_escapeScript.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\windows\InAppBrowserProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\src\wp\InAppBrowser.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\inject.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\inject.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\inject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\local.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\local.pdf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\video.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\tests\tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\www\inappbrowser.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\www\inappbrowser.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-inappbrowser-master\www\windows8\InAppBrowserProxy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\de\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\es\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\fr\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\it\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\ja\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\ko\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\pl\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\doc\zh\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\NOTICE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\RELEASENOTES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\src\android\WhitelistPlugin.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\src\ios\CDVWhitelistPlugin.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\src\ios\CDVWhitelistPlugin.m">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\cordova-plugin-whitelist-master\whitelist.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\plugin.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\src\android\nl\xservices\plugins\LaunchMyApp.java">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\www\android\LaunchMyApp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\www\ios\LaunchMyApp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\Custom-URL-scheme-master\www\windows\LaunchMyApp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Plugins\PushPlugin-master\.gitignore" />
+    <Content Include="Plugins\PushPlugin-master\Example\server\pushADM.js" />
+    <Content Include="Plugins\PushPlugin-master\Example\server\pushAPNS.rb" />
+    <Content Include="Plugins\PushPlugin-master\Example\server\pushGCM.rb" />
+    <Content Include="Plugins\PushPlugin-master\Example\www\beep.wav" />
+    <Content Include="Plugins\PushPlugin-master\Example\www\index.html" />
+    <Content Include="Plugins\PushPlugin-master\Example\www\jquery_1.5.2.min.js" />
+    <Content Include="Plugins\PushPlugin-master\Example\www\PushNotification.js" />
+    <Content Include="Plugins\PushPlugin-master\MIT-LICENSE" />
+    <Content Include="Plugins\PushPlugin-master\plugin.xml" />
+    <Content Include="Plugins\PushPlugin-master\README.md" />
+    <Content Include="Plugins\PushPlugin-master\spec\genericpush.tests.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\HtmlReporter.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\HtmlReporterHelpers.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\ReporterView.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\SpecView.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\SuiteView.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\html\TrivialReporter.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\index.html" />
+    <Content Include="Plugins\PushPlugin-master\spec\jasmine.css" />
+    <Content Include="Plugins\PushPlugin-master\spec\jasmine.js" />
+    <Content Include="Plugins\PushPlugin-master\spec\test-runner.js" />
+    <Content Include="Plugins\PushPlugin-master\src\amazon\ADMHandlerActivity.java" />
+    <Content Include="Plugins\PushPlugin-master\src\amazon\ADMMessageHandler.java" />
+    <Content Include="Plugins\PushPlugin-master\src\amazon\PushPlugin.java" />
+    <Content Include="Plugins\PushPlugin-master\src\android\com\plugin\gcm\CordovaGCMBroadcastReceiver.java" />
+    <Content Include="Plugins\PushPlugin-master\src\android\com\plugin\gcm\GCMIntentService.java" />
+    <Content Include="Plugins\PushPlugin-master\src\android\com\plugin\gcm\PushHandlerActivity.java" />
+    <Content Include="Plugins\PushPlugin-master\src\android\com\plugin\gcm\PushPlugin.java" />
+    <Content Include="Plugins\PushPlugin-master\src\android\libs\gcm.jar" />
+    <Content Include="Plugins\PushPlugin-master\src\ios\AppDelegate+notification.h" />
+    <Content Include="Plugins\PushPlugin-master\src\ios\AppDelegate+notification.m" />
+    <Content Include="Plugins\PushPlugin-master\src\ios\PushPlugin.h" />
+    <Content Include="Plugins\PushPlugin-master\src\ios\PushPlugin.m" />
+    <Content Include="Plugins\PushPlugin-master\src\windows\PushPluginProxy.js" />
+    <Content Include="Plugins\PushPlugin-master\src\wp8\Newtonsoft.Json.dll" />
+    <Content Include="Plugins\PushPlugin-master\src\wp8\PushPlugin.cs" />
+    <Content Include="Plugins\PushPlugin-master\www\blackberry10\PushPluginProxy.js" />
+    <Content Include="Plugins\PushPlugin-master\www\PushNotification.js" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\.gitignore" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\plugin.xml" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\README.md" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-android-share.png" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios6-share.png" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios7-ipad-share.png" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-ios7-share.png" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshot-wp8-share.jpg" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\screenshots-ios7-shareconfig.png" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\plugins\SocialSharing.java" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\SocialSharing.h" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\SocialSharing.m" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\windows\SocialSharingProxy.js" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\SocialSharing.cs" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\plugin.xml" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\tests.js" />
+    <Content Include="Plugins\SocialSharing-PhoneGap-Plugin-master\www\SocialSharing.js" />
+    <Content Include="scripts\fragments\admins.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\termsModal.ts" />
+    <TypeScriptCompile Include="scripts\views\linkedAccounts.ts" />
+    <Content Include="scripts\fragments\admins.ts" />
+    <Content Include="scripts\fragments\appDrawer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\appDrawer.ts" />
+    <Content Include="scripts\fragments\locationManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\locationManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\pushManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\pushManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\termsModal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\views\linkedAccounts.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\views\validAccountsView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\views\validAccountsView.ts" />
+    <Content Include="typings\jquery.parsley\jquery.parsley.d.ts" />
+    <Content Include="typings\moment\moment-node.d.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="typings\moment\moment.d.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\selfieView.ts" />
+    <TypeScriptCompile Include="scripts\fragments\baseView.ts" />
+    <TypeScriptCompile Include="scripts\fragments\baseDrawer.ts" />
+    <Content Include="scripts\fragments\baseDrawer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\uiClass.ts" />
+    <Content Include="scripts\fragments\baseModalView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\baseModalView.ts" />
+    <Content Include="scripts\fragments\baseView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\cheers.ts" />
+    <Content Include="scripts\fragments\favorites.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\favorites.ts" />
+    <Content Include="scripts\fragments\cheers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\favoritesDrawer.ts" />
+    <Content Include="scripts\fragments\favoritesDrawer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\selfieView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\stateManager.ts" />
+    <Content Include="scripts\fragments\stateManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\fragments\uiClass.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\Interfaces.ts" />
+    <Content Include="scripts\Interfaces.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\phone\phone.js" />
+    <Content Include="scripts\phone\utilScript.js" />
+    <TypeScriptCompile Include="scripts\typings\interfaces.d.ts" />
+    <Content Include="scripts\typings\jquery.intltelinput\jquery.intltelinput.d.ts" />
+    <TypeScriptCompile Include="scripts\views\partyFeed.ts" />
+    <Content Include="scripts\views\venueView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\views\venueView.ts" />
+    <Content Include="scripts\views\partyFeed.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\xhr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\xhr.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\fragments\geoLocation.ts" />
+    <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\bootstrap.less" />
+    <Content Include="scripts\fragments\geoLocation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\NativePageTransitionsKendoAdapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\pouchdb-3.5.0.min.js" />
+    <Content Include="scripts\require.js" />
+    <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait@2x.png" />
+    <Resource Include="App_Resources\iOS\Default.png" />
+    <Resource Include="App_Resources\iOS\Default@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-40.png" />
+    <Resource Include="App_Resources\iOS\icon-40@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-40@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-60.png" />
+    <Resource Include="App_Resources\iOS\icon-60@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-60@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-72.png" />
+    <Resource Include="App_Resources\iOS\icon-72@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-76.png" />
+    <Resource Include="App_Resources\iOS\icon-76@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small@2x.png" />
+    <Resource Include="App_Resources\iOS\icon.png" />
+    <Resource Include="App_Resources\iOS\icon@2x.png" />
+    <Resource Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Resource Include="App_Resources\WP8\Assets\BadgeLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\Logo.png" />
+    <Resource Include="App_Resources\WP8\Assets\SplashScreen.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile150x150.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile71x71.png" />
+    <Resource Include="App_Resources\WP8\Assets\StoreLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\WideLogo.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="kendo\js\jquery.min.js" />
+    <Content Include="kendo\styles\images\back.png" />
+    <Content Include="kendo\styles\images\kendoui.svg" />
+    <Content Include="kendo\styles\images\kendoui.ttf" />
+    <Content Include="kendo\styles\images\kendoui.woff" />
+    <Content Include="kendo\styles\images\wp8_icons.png" />
+    <Content Include="kendo\styles\images\wp8_inverseicons.png" />
+    <Content Include="kendo\typescript\jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\index.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\cordova.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\simulator.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\BatteryStatus.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Camera.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Contacts.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Device.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceMotion.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceOrientation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Dialogs.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileSystem.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileTransfer.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Globalization.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\InAppBrowser.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Media.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\MediaCapture.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\NetworkInformation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Push.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Splashscreen.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Vibration.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\WebSQL.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-land-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\drawable-xhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\xml\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Assets\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\animate.css\" />
+    <Folder Include="bower_components\animate.css\source\" />
+    <Folder Include="bower_components\animate.css\source\attention_seekers\" />
+    <Folder Include="bower_components\animate.css\source\bouncing_entrances\" />
+    <Folder Include="bower_components\animate.css\source\bouncing_exits\" />
+    <Folder Include="bower_components\animate.css\source\fading_entrances\" />
+    <Folder Include="bower_components\animate.css\source\fading_exits\" />
+    <Folder Include="bower_components\animate.css\source\flippers\" />
+    <Folder Include="bower_components\animate.css\source\lightspeed\" />
+    <Folder Include="bower_components\animate.css\source\rotating_entrances\" />
+    <Folder Include="bower_components\animate.css\source\rotating_exits\" />
+    <Folder Include="bower_components\animate.css\source\sliding_entrances\" />
+    <Folder Include="bower_components\animate.css\source\sliding_exits\" />
+    <Folder Include="bower_components\animate.css\source\specials\" />
+    <Folder Include="bower_components\animate.css\source\zooming_entrances\" />
+    <Folder Include="bower_components\animate.css\source\zooming_exits\" />
+    <Folder Include="bower_components\bootstrap\" />
+    <Folder Include="bower_components\bootstrap\dist\" />
+    <Folder Include="bower_components\bootstrap\dist\css\" />
+    <Folder Include="bower_components\bootstrap\dist\fonts\" />
+    <Folder Include="bower_components\bootstrap\dist\js\" />
+    <Folder Include="bower_components\bootstrap\fonts\" />
+    <Folder Include="bower_components\bootstrap\grunt\" />
+    <Folder Include="bower_components\bootstrap\js\" />
+    <Folder Include="bower_components\bootstrap\less\" />
+    <Folder Include="bower_components\bootstrap\less\mixins\" />
+    <Folder Include="bower_components\fastclick\" />
+    <Folder Include="bower_components\fastclick\lib\" />
+    <Folder Include="bower_components\fontawesome\" />
+    <Folder Include="bower_components\fontawesome\css\" />
+    <Folder Include="bower_components\fontawesome\fonts\" />
+    <Folder Include="bower_components\fontawesome\less\" />
+    <Folder Include="bower_components\fontawesome\scss\" />
+    <Folder Include="bower_components\jquery\" />
+    <Folder Include="bower_components\jquery\dist\" />
+    <Folder Include="bower_components\jquery\src\" />
+    <Folder Include="bower_components\jquery\src\ajax\" />
+    <Folder Include="bower_components\jquery\src\ajax\var\" />
+    <Folder Include="bower_components\jquery\src\attributes\" />
+    <Folder Include="bower_components\jquery\src\core\" />
+    <Folder Include="bower_components\jquery\src\core\var\" />
+    <Folder Include="bower_components\jquery\src\css\" />
+    <Folder Include="bower_components\jquery\src\css\var\" />
+    <Folder Include="bower_components\jquery\src\data\" />
+    <Folder Include="bower_components\jquery\src\data\var\" />
+    <Folder Include="bower_components\jquery\src\effects\" />
+    <Folder Include="bower_components\jquery\src\event\" />
+    <Folder Include="bower_components\jquery\src\exports\" />
+    <Folder Include="bower_components\jquery\src\manipulation\" />
+    <Folder Include="bower_components\jquery\src\manipulation\var\" />
+    <Folder Include="bower_components\jquery\src\queue\" />
+    <Folder Include="bower_components\jquery\src\sizzle\" />
+    <Folder Include="bower_components\jquery\src\sizzle\dist\" />
+    <Folder Include="bower_components\jquery\src\traversing\" />
+    <Folder Include="bower_components\jquery\src\traversing\var\" />
+    <Folder Include="bower_components\jquery\src\var\" />
+    <Folder Include="bower_components\moment.twitter\" />
+    <Folder Include="bower_components\moment.twitter\src\" />
+    <Folder Include="bower_components\moment\" />
+    <Folder Include="bower_components\moment\locale\" />
+    <Folder Include="bower_components\moment\min\" />
+    <Folder Include="bower_components\moment\src\" />
+    <Folder Include="bower_components\moment\src\lib\" />
+    <Folder Include="bower_components\moment\src\lib\create\" />
+    <Folder Include="bower_components\moment\src\lib\duration\" />
+    <Folder Include="bower_components\moment\src\lib\format\" />
+    <Folder Include="bower_components\moment\src\lib\locale\" />
+    <Folder Include="bower_components\moment\src\lib\moment\" />
+    <Folder Include="bower_components\moment\src\lib\parse\" />
+    <Folder Include="bower_components\moment\src\lib\units\" />
+    <Folder Include="bower_components\moment\src\lib\utils\" />
+    <Folder Include="bower_components\moment\src\locale\" />
+    <Folder Include="bower_components\moment\templates\" />
+    <Folder Include="bower_components\parsleyjs-bootstrap3\" />
+    <Folder Include="bower_components\parsleyjs\" />
+    <Folder Include="bower_components\parsleyjs\dist\" />
+    <Folder Include="bower_components\parsleyjs\src\" />
+    <Folder Include="bower_components\parsleyjs\src\extra\" />
+    <Folder Include="bower_components\parsleyjs\src\extra\plugin\" />
+    <Folder Include="bower_components\parsleyjs\src\extra\validator\" />
+    <Folder Include="bower_components\parsleyjs\src\i18n\" />
+    <Folder Include="bower_components\parsleyjs\src\parsley\" />
+    <Folder Include="bower_components\parsleyjs\src\parsley\factory\" />
+    <Folder Include="bower_components\parsleyjs\src\wrap\" />
+    <Folder Include="bower_components\requirejs-regular\" />
+    <Folder Include="bower_components\requirejs-regular\demo\" />
+    <Folder Include="bower_components\requirejs-regular\demo\scripts\" />
+    <Folder Include="bower_components\requirejs-regular\src\" />
+    <Folder Include="css\" />
+    <Folder Include="css\fonts\" />
+    <Folder Include="img\" />
+    <Folder Include="kendo\" />
+    <Folder Include="kendo\js\" />
+    <Folder Include="kendo\styles\" />
+    <Folder Include="kendo\styles\images\" />
+    <Folder Include="kendo\typescript\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="Plugins\AppVersion-master\" />
+    <Folder Include="Plugins\AppVersion-master\src\" />
+    <Folder Include="Plugins\AppVersion-master\src\android\" />
+    <Folder Include="Plugins\AppVersion-master\src\ios\" />
+    <Folder Include="Plugins\AppVersion-master\src\windows8\" />
+    <Folder Include="Plugins\AppVersion-master\src\wp8\" />
+    <Folder Include="Plugins\AppVersion-master\www\" />
+    <Folder Include="Plugins\AppVersion-master\www\blackberry10\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Headers\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\Modules\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKCoreKit.framework\PrivateHeaders\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Headers\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKLoginKit.framework\Modules\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Headers\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\src\ios\FBSDKShareKit.framework\Modules\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\tests\" />
+    <Folder Include="Plugins\cordova-plugin-facebook4-master\www\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\images\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\kml\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp2\www\pages\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-png\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\css\images\icons-svg\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\images\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\js\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\kml\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\example\DemoApp\www\pages\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\android\plugin\google\maps\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\src\ios\GoogleMaps\NSData-Base64\" />
+    <Folder Include="Plugins\cordova-plugin-googlemaps-1.3.4\www\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\de\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\es\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\fr\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\it\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\ja\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\ko\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\pl\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\ru\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\doc\zh\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\amazon\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-hdpi\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-mdpi\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xhdpi\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\android\res\drawable-xxhdpi\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\de\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\es\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\fr\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\it\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\ja\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\ko\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\pl\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\blackberry10\doc\zh\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\browser\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\firefoxos\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\ios\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\ubuntu\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\windows\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\src\wp\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\tests\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\tests\resources\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\www\" />
+    <Folder Include="Plugins\cordova-plugin-inappbrowser-master\www\windows8\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\de\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\es\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\fr\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\it\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\ja\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\ko\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\pl\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\doc\zh\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\src\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\src\android\" />
+    <Folder Include="Plugins\cordova-plugin-whitelist-master\src\ios\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\src\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\src\android\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\src\android\nl\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\src\android\nl\xservices\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\src\android\nl\xservices\plugins\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\www\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\www\android\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\www\ios\" />
+    <Folder Include="Plugins\Custom-URL-scheme-master\www\windows\" />
+    <Folder Include="Plugins\PushPlugin-master\" />
+    <Folder Include="Plugins\PushPlugin-master\Example\" />
+    <Folder Include="Plugins\PushPlugin-master\Example\server\" />
+    <Folder Include="Plugins\PushPlugin-master\Example\www\" />
+    <Folder Include="Plugins\PushPlugin-master\spec\" />
+    <Folder Include="Plugins\PushPlugin-master\spec\html\" />
+    <Folder Include="Plugins\PushPlugin-master\src\" />
+    <Folder Include="Plugins\PushPlugin-master\src\amazon\" />
+    <Folder Include="Plugins\PushPlugin-master\src\android\" />
+    <Folder Include="Plugins\PushPlugin-master\src\android\com\" />
+    <Folder Include="Plugins\PushPlugin-master\src\android\com\plugin\" />
+    <Folder Include="Plugins\PushPlugin-master\src\android\com\plugin\gcm\" />
+    <Folder Include="Plugins\PushPlugin-master\src\android\libs\" />
+    <Folder Include="Plugins\PushPlugin-master\src\ios\" />
+    <Folder Include="Plugins\PushPlugin-master\src\windows\" />
+    <Folder Include="Plugins\PushPlugin-master\src\wp8\" />
+    <Folder Include="Plugins\PushPlugin-master\www\" />
+    <Folder Include="Plugins\PushPlugin-master\www\blackberry10\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\screenshots\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\android\nl\xservices\plugins\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\ios\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\windows\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\src\wp8\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\tests\" />
+    <Folder Include="Plugins\SocialSharing-PhoneGap-Plugin-master\www\" />
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\fragments\" />
+    <Folder Include="scripts\views\" />
+    <Folder Include="scripts\phone\" />
+    <Folder Include="scripts\typings\" />
+    <Folder Include="scripts\typings\cordova\" />
+    <Folder Include="scripts\typings\cordova\plugins\" />
+    <Folder Include="scripts\typings\jquery.intltelinput\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\jquery.parsley\" />
+    <Folder Include="typings\moment\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(IceniumTargets)Build.targets" />
+  <!--
+    TODO: Uncomment this code if you need to customize the build process.
+    <Target Name="BeforeBuild">
+        <Message Text="TODO: Implement BeforeBuild" Importance="high" />
+    </Target>
+
+    <Target Name="AfterBuild">
+        <Message Text="TODO: Implement AfterBuild" Importance="high" />
+    </Target>
+    -->
+</Project>
